@@ -30,7 +30,7 @@ p{
 
 .header{
     background-image: url("images/header_background.png");
-    object-fit: cover;
+    object-fit: cover no-repeat;
     padding: 70px 0px;
 }
 .header_images{
@@ -38,7 +38,6 @@ p{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    max-height: 300px;
 }
 
 .specs_logo{
@@ -64,7 +63,6 @@ p{
     flex-direction: row;
     justify-content: space-around;
     margin: 0;
-    max-height: 100vh;
 }
 
 .description{
@@ -105,6 +103,16 @@ p{
     background-color: #4A54A8;
     color: white;
     padding: 105px 50px;
+}
+
+.journey_map_images--mobile{
+    display: none;
+}
+
+.journey_map_images--desktop{
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
 }
 
 .journey_map_image{
@@ -167,5 +175,23 @@ footer{
     
     .fortes_logo{
         height: 130px;
+    }
+
+    .journey_map_images--desktop{
+        display: none;
+    }
+    .journey_map_images--mobile{
+        display: grid;
+        column-gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 70px;
+    }
+}
+
+@media (max-width: 550px){
+    .journey_map_images--mobile{
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
     }
 }
