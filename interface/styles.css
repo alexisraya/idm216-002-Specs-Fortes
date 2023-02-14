@@ -1,0 +1,270 @@
+:root {
+    --fresh-yellow: #F4B029;
+    --fresh-red:#D55638;
+    --fresh-blue:#214962;
+    --fresh-bluegrey:#3C4D4D;
+    --fresh-grey:#333333;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* button styles */
+button {
+    border: none;
+    border-radius: 30px;
+    font-family: 'Lexend Deca', sans-serif;
+    padding: .5rem;
+    width: fit-content;
+}
+.lightButton {
+    color: var(--fresh-red);
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.47);
+    transition: .2s ease-in;
+}
+.darkButton {
+    color: white;
+    background-color: var(--fresh-grey);
+    transition: .2s ease-in;
+}
+/* ---------- General Elements -----------*/
+
+/* Menu Item Display */
+.menu_item {
+    display: grid;
+    grid-template-columns: 30% 70% ;
+    grid-template-rows: 30% 40% 30%;
+    border: 1px solid black;
+    border-radius: 13px;
+    width: 361px;
+    height: 123px;
+    margin: 1rem auto;
+}
+.menu_item img {
+    grid-column: 1/1;
+    grid-row: 1/4;
+}
+
+/* Page Headers on Mobile */
+.pageHeader{
+    display: flex;
+    align-items: center;
+    background-color: var(--fresh-yellow);
+    border-radius: 0px 0px 10px 10px;
+    height: 127px;
+    justify-content: center;
+}
+.backArrow {
+    position: absolute;
+    left: 8%;
+    font-size: 34px;
+    
+}
+
+/* Text Styles */
+.homeHeader {
+    font-family: Lexend Deca;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+.homeEmphasis{
+    font-family: Lexend Deca;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.home_p {
+    font-family: Lexend Deca;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+}
+.ctaButton{
+    font-family: Lexend Deca;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+}
+.pageTitle {
+    font-family: Lexend Deca;
+    font-weight: 800;
+    font-size: 24px;
+}
+.Subheading{
+    font-family: Lexend Deca;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+    margin: 1rem;
+}
+.itemTitle {
+    font-family: Lexend Deca;
+    font-size: 20px;
+    font-weight: 800;
+}
+.itemListing {
+font-family: Lexend Deca;
+font-size: 16px;
+font-weight: 700;
+}
+.description {
+font-family: Lexend Deca;
+font-size: 14px;
+font-weight: 400;
+line-height: 18px;
+}
+.price {
+    font-family: Lexend Deca;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 19px;
+}
+
+
+/* Navigation, Referenced code: https://codepen.io/havardob/pen/RwWKaor?editors=1100 */
+.menu {
+    background-color: #333333;
+	display: flex;
+	flex-grow: 1;
+	height: 108px;
+	width: 100%;
+	overflow: hidden;
+    position: fixed;
+    bottom: 0;
+	
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-decoration: none;
+  }
+  .nav-item:focus .material-icons, .nav-item:hover .material-icons {
+    color: var(--fresh-yellow);
+  }
+  .menu-nav:focus .nav-item-label, .nav-item:hover .nav-item-label {
+    color: var(--fresh-yellow);
+  }
+
+.material-icons {
+	display: block;
+	margin-bottom: 4px;
+	font-size: 26px;
+	color: white;
+	transition: 0.25s ease;
+}
+.nav-item-label {
+    font-family: Lexend Deca;
+	display: block;
+	font-size: 13px;
+	color: white;
+	transition: 0.25s ease;
+}
+
+/* home screen styles */
+.home_start {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    overflow: hidden;
+    padding: 1rem;
+    background-color: black;
+}
+.home_start button {
+    position: absolute;
+    width: 175px;
+    left: 196px;
+    top: 449px;
+    z-index: 10;
+}
+.home_logo {
+    width: 604px;
+    align-self: center;
+    z-index: 10;
+}
+.home_botmDiv { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 25% 24% 35% 10%;
+    background-color: var(--fresh-red);
+    color: white;
+    height: 393px;
+    padding: 1rem;
+    z-index: 5;
+}
+.home_botmDiv h3 {
+    grid-column: 1/3;
+    justify-self: center;
+    align-self: flex-end;
+}
+
+.home_botmDiv img {
+    grid-column: 1/1;
+    grid-row: 2/4;
+    justify-self: center;
+}
+.home_botmDiv button {
+    grid-column: 2/2;
+}
+.home_wwdDiv{
+    background-color: black;
+    color:white;
+    text-align: center;
+    padding: 1rem;
+    height: 450px;
+}
+.home_wwdDiv h1 {
+    font-family: 'Permanent Marker', cursive;
+    margin: 0rem;
+}
+.bubble::after {
+    content:'';
+    border-radius: 0% 0% 100% 100%;
+    position: absolute;
+    bottom: 19%;
+    left: 0%;
+    height: 15%;
+    width:100%;
+    background-color: black;
+    z-index: 5 ;
+}
+
+/* Menu styles */
+.menu_QuickScroll {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem auto;
+}
+.menu_QuickScroll a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu_QuickScroll span {
+    background-color: var(--fresh-red);
+    border-radius: 34px;
+    color: white;
+    padding: .5rem;
+    text-align: center;
+    width: 78px;
+}
+.scrollIcon {
+    display: block;
+	margin-bottom: 4px;
+	font-size: 26px;
+	transition: 0.25s ease
+}
