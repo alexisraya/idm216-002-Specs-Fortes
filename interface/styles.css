@@ -9,38 +9,62 @@ html, body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: var(--fresh-grey);
 }
 a {
     color: inherit;
     text-decoration: none;
 }
+p {
+    font-family: Lexend Deca;
+}
 /* button styles */
 button {
     border: none;
     border-radius: 30px;
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: Lexend Deca;
     padding: .5rem;
     width: fit-content;
+    transition: .2s ease-in;
 }
 .lightButton {
     color: var(--fresh-red);
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.47);
-    transition: .2s ease-in;
+    min-width: 152px;
 }
 .darkButton {
     color: white;
     background-color: var(--fresh-grey);
-    transition: .2s ease-in;
+    min-width: 152px;
+}
+.activeButton {
+    color: white;
+    background-color: var(--fresh-red);
+    min-width: 152px;
+}
+
+.borderButton {
+    background-color: transparent;
+    border: 3px solid #F4B029;
+    border-radius: 25px;
+    color: white;
 }
 /* ---------- General Elements -----------*/
 
+.getCentered {
+    display: flex;
+    justify-content: center;
+}
+
 /* Menu Item Display */
 .menu_item {
+    cursor: pointer;
     display: grid;
     grid-template-columns: 30% 70% ;
     grid-template-rows: 30% 40% 30%;
-    border: 1px solid black;
+    align-items: center;
+    background-color: #FFFFFF;
     border-radius: 13px;
     width: 361px;
     height: 123px;
@@ -51,6 +75,12 @@ button {
     grid-row: 1/4;
 }
 
+.menu_item div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 /* Page Headers on Mobile */
 .pageHeader{
     display: flex;
@@ -59,12 +89,12 @@ button {
     border-radius: 0px 0px 10px 10px;
     height: 127px;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 .backArrow {
     position: absolute;
     left: 8%;
     font-size: 34px;
-    
 }
 
 /* Text Styles */
@@ -101,7 +131,8 @@ button {
     font-weight: 800;
     font-size: 24px;
 }
-.Subheading{
+.Subheading {
+    color: var(--fresh-yellow);
     font-family: Lexend Deca;
     font-size: 20px;
     font-weight: 700;
@@ -135,6 +166,7 @@ line-height: 18px;
 /* Navigation, Referenced code: https://codepen.io/havardob/pen/RwWKaor?editors=1100 */
 .menu {
     background-color: #333333;
+    border-top: 8px solid white;
 	display: flex;
 	flex-grow: 1;
 	height: 108px;
@@ -142,7 +174,7 @@ line-height: 18px;
 	overflow: hidden;
     position: fixed;
     bottom: 0;
-	
+    z-index: 1000;
 }
 
 .nav-item {
@@ -177,6 +209,17 @@ line-height: 18px;
 .navAllowance{
     height: 108px;
 }
+
+.whiteDiv {
+    border-top: 1px solid #FFFFFF;
+    height: 2px;
+}
+.yellowDiv {
+    border-top: 1px solid var(--fresh-yellow);
+    height: 2px;
+    margin: 1rem auto;
+    width: 80%;
+}
 /* home screen styles */
 .home_start {
     display: flex;
@@ -194,7 +237,6 @@ line-height: 18px;
     z-index: 10;
 }
 .home_logo {
-    width: 604px;
     align-self: center;
     z-index: 10;
 }
@@ -237,7 +279,7 @@ line-height: 18px;
     content:'';
     border-radius: 0% 0% 100% 100%;
     position: absolute;
-    bottom: 19%;
+    bottom: 0;
     left: 0%;
     height: 15%;
     width:100%;
@@ -270,7 +312,7 @@ line-height: 18px;
 	font-size: 26px;
 	transition: 0.25s ease
 }
-/*  */
+/* Customization Screen */
 .customize_itemDisplay {
     display: grid;
     justify-items: center;
@@ -291,12 +333,14 @@ line-height: 18px;
     padding: 1rem;
     height: 50px;
     width: 50px;
+    margin: .2rem;
 }
 .topping img {
     width: 55px;
 }
 .customize_productDescription{
-    margin: 1rem;
+    margin: auto auto 2rem;
+    color: white;
 }
 .customize_price {
     display: flex;
@@ -316,4 +360,50 @@ line-height: 18px;
     font-size: 36px;
     text-align: center;
     color: #FFFFFF;
+}
+/* Cart Styles */
+.cart_totalDiv {
+    display: flex;
+    flex-direction: column;
+}
+.cart_totalDiv button {
+    align-self: end;
+    margin: 0 1rem;
+}
+.cart_total {
+   color: #FFFFFF;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin: 0 2rem;
+    font-family: 'Lexend Deca';
+    font-weight: 700;
+    font-size: 24px;
+}
+.cart_quickAdd {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 1rem;
+}
+.quickAddBlock {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: #FFFFFF;
+    border-radius: 15px;
+    width: 165px;
+    margin: 1rem;
+}
+.quickAddBlock img {
+    grid-column: 1/3;
+    margin: .5rem;
+}
+.quickAddBlock iconify-icon{
+    font-size: 20px;
+ }
+.quickAddBlock p, iconify-icon{
+   grid-row: 2/2;
+}
+.payButton {
+    margin: .5rem 0 2rem;
 }
