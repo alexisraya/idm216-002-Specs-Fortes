@@ -2,3 +2,8 @@
 
 *.jpg
 *.png
+
+images
+fonts
+
+*.DS_Store
