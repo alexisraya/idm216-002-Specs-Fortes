@@ -1,19 +1,19 @@
 @font-face{
     font-family: 'Lemon Milk';
-    src: url("fonts/lemon_milk/LEMONMILK-Bold.woff2") format('woff2');
+    src: url("../fonts/lemon_milk/LEMONMILK-Bold.woff2") format('woff2');
   }
   
 @font-face {
     font-family: 'Inter';
-    src: url("fonts/inter/Inter-Regular.woff2") format("woff2");
+    src: url("../fonts/inter/Inter-Regular.woff2") format("woff2");
 }
 @font-face {
     font-family: 'Avenir';
-    src: url("fonts/avenir/AvenirLTStd-Roman.woff2") format("woff2");
+    src: url("../fonts/avenir/AvenirLTStd-Roman.woff2") format("woff2");
 }
 @font-face {
     font-family: 'Walter';
-    src: url("fonts/walter_turncoat/WalterTurncoat-Regular.woff2") format("woff2");
+    src: url("../fonts/walter_turncoat/WalterTurncoat-Regular.woff2") format("woff2");
 }
 
 html, body{
@@ -29,7 +29,7 @@ p{
 }
 
 .header{
-    background-image: url("images/header_background.png");
+    background-image: url("../images/header_background.png");
     object-fit: cover no-repeat;
     padding: 70px 0px;
 }
@@ -161,7 +161,34 @@ footer{
     justify-items: center;
     justify-content: center;
     justify-self: flex-end;
-  }
+}
+
+
+/* Table Styles */
+.table-container{
+    overflow-x: auto;
+    padding: 20px 30px;
+}
+
+.admin-buttons{
+    column-gap: 40px;
+    display: flex;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    padding: 10px 15px;
+}
+td{
+    padding: 10px 15px;
+    text-align: left;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media (max-width: 880px){
     .hero_image, .damon_image{

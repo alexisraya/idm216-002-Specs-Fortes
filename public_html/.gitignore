@@ -1,0 +1,9 @@
+.env.production.php
+
+*.jpg
+*.png
+
+images
+fonts
+
+*.DS_Store
