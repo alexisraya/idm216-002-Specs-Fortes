@@ -161,7 +161,34 @@ footer{
     justify-items: center;
     justify-content: center;
     justify-self: flex-end;
-  }
+}
+
+
+/* Table Styles */
+.table-container{
+    overflow-x: auto;
+    padding: 20px 30px;
+}
+
+.admin-buttons{
+    column-gap: 40px;
+    display: flex;
+}
+
+table{
+    width: 100%;
+}
+
+th{
+    padding: 10px 15px;
+}
+td{
+    padding: 10px 15px;
+    text-align: left;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 @media (max-width: 880px){
     .hero_image, .damon_image{
