@@ -13,16 +13,16 @@
 
 @font-face{
   font-family: 'Lemon Milk';
-  src: url("fonts/lemon_milk/LEMONMILK-Bold.woff2") format('woff2');
+  src: url("../fonts/lemon_milk/LEMONMILK-Bold.woff2") format('woff2');
 }
 
 @font-face {
   font-family: 'Inter';
-  src: url("fonts/inter/Inter-Regular.woff2") format("woff2");
+  src: url("../fonts/inter/Inter-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: 'Avenir';
-  src: url("fonts/avenir/AvenirLTStd-Roman.woff2") format("woff2");
+  src: url("../fonts/avenir/AvenirLTStd-Roman.woff2") format("woff2");
 }
 
 html, body {
@@ -63,6 +63,7 @@ footer{
   justify-items: center;
   justify-content: center;
   justify-self: flex-end;
+  text-align: center;
 }
 
 .card_info{

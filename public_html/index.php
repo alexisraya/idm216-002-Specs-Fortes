@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Specs</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
-  <link href="_dist/styles/team-style.css" rel="stylesheet" type="text/css">
-</head>
+<?php
+include_once __DIR__ . '/app.php';
+$page_title = 'Team';
+include_once __DIR__ . '/_components/header.php';
+?>
 
 <body>
   <img class="background-image" src="_dist/images/team_page/background-image.png" alt="background">
@@ -101,9 +96,7 @@
     </div>
   </div>
   
-  <footer>
-    <p class="footer_text">&copy; 2023 Specs</p>
-  </footer>
-</body>
 
-</html>
+<?php
+include_once __DIR__ . '/_components/footer.php';
+?>

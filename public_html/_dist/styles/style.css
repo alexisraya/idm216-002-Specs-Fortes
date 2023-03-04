@@ -1,8 +1,23 @@
+:root{
+    --black: #000000;
+    --white: #FFFFFF;
+    --grey: #333333;
+    --bluegrey: #3C4D4D;
+    --medgrey: #9EA3A3;
+    --lightgrey: #EEEEEE;
+    --blue: #214962;
+    --red: #D55638;
+    --yellow: #F4B029;
+
+    --background-color: var(--black);
+    --text-color: var(--black);
+    --heading-color: var(--white);
+}
+
 @font-face{
     font-family: 'Lemon Milk';
     src: url("../fonts/lemon_milk/LEMONMILK-Bold.woff2") format('woff2');
-  }
-  
+}
 @font-face {
     font-family: 'Inter';
     src: url("../fonts/inter/Inter-Regular.woff2") format("woff2");
@@ -15,154 +30,59 @@
     font-family: 'Walter';
     src: url("../fonts/walter_turncoat/WalterTurncoat-Regular.woff2") format("woff2");
 }
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url("../fonts/lexend_deca/LexendDeca-VariableFont_wght.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Permanent Marker';
+    src: url("../fonts/permanent_marker/PermanentMarker-Regular.woff2") format("woff2");
+}
 
 html, body{
     padding: 0;
     margin: 0;
 }
 
-h1{
-    font-family: 'Lemon Milk', Arial, Helvetica, sans-serif;
+.main_container{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h2{
+    font-weight: 300;
+}
+
+h3{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
 p{
+    color: var(--text-color);
     font-family: 'Avenir', Arial, Helvetica, sans-serif;
-}
-
-.header{
-    background-image: url("../images/header_background.png");
-    object-fit: cover no-repeat;
-    padding: 70px 0px;
-}
-.header_images{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.specs_logo{
-    height:260px;
-    width: auto;
-}
-
-.header_x{
-    color: white;
-    font-family: 'Walter', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 0 30px 0 20px;
-}
-
-.fortes_logo{
-    height: 230px;
-    width: auto;
-}
-
-.hero{
-    background-color: #D55638;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     margin: 0;
-}
-
-.description{
-    padding: 65px 50px;
-}
-
-.description_text{
-    font-size: 2rem;
-}
-
-.damon_image{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.asset_header{
-    margin: 0;
-    padding: 0 0 75px 0;
-}
-.user_personas{
-    background-color: #4DB0BE;
-    color: white;
-    padding: 105px 50px;
-}
-
-.user_persona_images{
-    display: flex;
-    flex-direction: column;
-    row-gap: 60px;
-}
-
-.user_persona_image{
-    width: 100%;
-}
-
-.journey_map{
-    background-color: #4A54A8;
-    color: white;
-    padding: 105px 50px;
-}
-
-.journey_map_images--mobile{
-    display: none;
-}
-
-.journey_map_images--desktop{
-    display: flex;
-    flex-direction: column;
-    row-gap: 60px;
-}
-
-.journey_map_image{
-    width: 100%;
-}
-
-.style_sheet{
-    background-color: #DEDEDD;
-    color: black;
-    padding: 105px 50px;
-}
-
-.style_sheet_image{
-    width: 100%;
-}
-
-.mood_board{
-    background-color: #F36871;
-    color: white;
-    padding: 105px 50px;
-}
-
-.mood_board_image{
-    width: 100%;
-}
-
-.critical_path{
-    background-color: #DEDEDD;
-    color: black;
-    padding: 105px 50px;
-}
-
-.figma_embed{
-    width: 100%;
-    min-height: 600px;
 }
 
 footer{
     align-items: center;
-    background-color: #DEDEDD;
+    background-color: var(--background-color);
     border: 0;
     bottom: 0;
     color: var(--white);
     display: flex;
     height: 100px;
-    justify-items: center;
     justify-content: center;
-    justify-self: flex-end;
+    text-align: center;
 }
-
 
 /* Table Styles */
 .table-container{
@@ -175,6 +95,11 @@ footer{
     display: flex;
 }
 
+.table-container{
+    overflow-x: auto;
+    padding: 20px 30px;
+}
+
 table{
     width: 100%;
 }
@@ -182,6 +107,7 @@ table{
 th{
     padding: 10px 15px;
 }
+
 td{
     padding: 10px 15px;
     text-align: left;
@@ -190,35 +116,104 @@ td{
     text-overflow: ellipsis;
 }
 
-@media (max-width: 880px){
-    .hero_image, .damon_image{
-        display: none;
-    }
-
-    .specs_logo{
-        height:150px;
-        width: auto;
-    }
-    
-    .fortes_logo{
-        height: 130px;
-    }
-
-    .journey_map_images--desktop{
-        display: none;
-    }
-    .journey_map_images--mobile{
-        display: grid;
-        column-gap: 30px;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 70px;
-    }
+/* Menu Item Styles */
+.menu_item_container{
+    align-items: center;
+    background-color: var(--white);
+    border: 1px black solid;
+    border-radius: 13px;
+    display: flex;
+    column-gap: 22px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 12px;
+    width: 361px;
+    min-height: 123px;
 }
 
-@media (max-width: 550px){
-    .journey_map_images--mobile{
-        display: flex;
-        flex-direction: column;
-        row-gap: 25px;
-    }
+.menu_item_title{
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    text-align: left;
+}
+
+.menu_item_description{
+    font-size: .875rem;
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    text-align: left;
+}
+
+.menu_item_price{
+    font-size: .93rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    text-align: right;
+}
+
+/* Login Page */
+.login_container{
+    align-items: center;
+    align-self: center;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login__title{
+    font-family: "Permanent Marker", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    margin: 125px 0px 0px 0px;
+}
+
+.login_subtitle{
+    font-size: 1rem;
+    margin: 48px 0px;
+}
+
+.signup_link{
+    color: var(--yellow);
+}
+
+.signup_link:hover{
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.login_label{
+    color: var(--white);
+}
+
+.login_input{
+    background-color: var(--lightgrey);
+    border: none;
+    border-radius: 5px;
+    height: 38px;
+    margin: 5px 0px;
+    width: 300px;
+}
+
+.login_button{
+    align-self: center;
+}
+
+.login_submit{
+    background-color: var(--medgrey);
+    border: none;
+    border-radius: 35px;
+    color: var(--white);
+    font-size: 1.25rem;
+    height: 50px;
+    margin: 70px 0px 0px 0px;
+    width: 198px;
 }

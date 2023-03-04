@@ -1,0 +1,89 @@
+/* :root {
+    --fresh-yellow: #F4B029;
+    --fresh-red:#D55638;
+    --fresh-blue:#214962;
+    --fresh-bluegrey:#3C4D4D;
+    --fresh-grey:#333333;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #999999;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+.header{
+    align-items: center;
+    background-color: black;
+    background-image: none;
+    border-radius: 0px 0px 250px 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 50px 0;
+}
+.header_images{
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
+}
+
+.start_button{
+    background-color: white;
+    border-radius: 35px;
+    color: var(--fresh-red);
+    width: 175px;
+    height: 64px;
+}
+
+.burg_of_month_container{
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px;
+}
+
+.burg_of_month_image{
+    display: flex;
+    flex-direction: row;
+    padding-top: 25px;
+    width: 100%;
+}
+
+.burg{
+    width: 100%;
+    object-fit: contain;
+}
+
+.burg_of_month_text{
+    padding: 0 20px;
+}
+
+.about_container{
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.locations_button{
+    background-color: white;
+    border-radius: 35px;
+    color: black;
+    width: 175px;
+    height: 64px;
+} */
