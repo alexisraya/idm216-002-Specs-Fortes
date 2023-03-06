@@ -1,6 +1,6 @@
 <?php
 include_once __DIR__ . '/../app.php';
-$page_title = 'Team';
+$page_title = 'Sign Up';
 include_once __DIR__ . '/../_components/header.php';
 ?>
 
@@ -8,7 +8,7 @@ include_once __DIR__ . '/../_components/header.php';
     <h1 class="login__title">Sign Up</h1>
     <h2 class="login_subtitle">Already have an account? <a class="signup_link" href="index.php">Sign In Here -></a></h2>
 
-    <form action="<?php echo site_url() . '/_includes/process-create-users.php' ?>" class="login_form">
+    <form action="<?php echo site_url() . '/_includes/process-create-users.php' ?>" class="login_form" method="post">
         <div class="name">
             <h3><label class="login_label" for="name">Name:</label></h3>
             <input class ="login_input" type="text" id="name" name="name">
@@ -26,12 +26,12 @@ include_once __DIR__ . '/../_components/header.php';
 
         <div class="email">
             <h3><label class="login_label" for="email">Email (Optional):</label></h3>
-            <input class ="login_input" type="text" id="email" name="email">
+            <input class ="login_input" type="email" id="email" name="email">
         </div>
 
         <div class="phone_number">
             <h3><label class="login_label" for="phone_number">Phone Number (Optional):</label></h3>
-            <input class ="login_input" type="text" id="phone_number" name="phone_number">
+            <input class ="login_input" type="tel" id="phone_number" name="phone_number">
         </div>
 
         <div class="login_button">

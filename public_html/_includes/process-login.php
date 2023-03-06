@@ -18,7 +18,7 @@ if ($user) {
         'id' => $user['id'],
         'name' => $user['name'],
     ];
-    redirect_to('/index.php');
+    redirect_to('/final/index.html');
 } else {
     $error_message = 'User was not updated: ' . mysqli_error($db_connection);
     redirect_to('/login/index.php?error=' . $error_message);
