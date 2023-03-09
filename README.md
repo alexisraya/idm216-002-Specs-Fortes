@@ -1,7 +1,7 @@
 # idm216-002-Specs-Fortes
 
-- DEV: https://alexisraya.com/idm216/
-- LIVE: https://alexisraya.com/idm216/
+- DEV: https://alexisraya.com/idm216/playground
+- LIVE: https://alexisraya.com/idm216/final
 
 ## Gitignore
 
