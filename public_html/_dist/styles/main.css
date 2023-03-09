@@ -256,14 +256,40 @@ td{
 .nav-link:active{
     color: var(--yellow);
 }
-
+.navbar-container{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--grey);
+    border-top: 8px solid var(--grey);
+    width: 100%;
+    height: 108px;
+}
 /* NAVBAR FROM CODEPEN */
+
+
+
+.nav-nav-container {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu {
+	display: flex;
+	flex-grow: 1;
+	height: 72px;
+	max-width: 370px;
+	overflow: hidden;
+	background-color: #333333;
+}
 
 .menu-item {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	flex-grow: 1;
 	text-decoration: none;
 }
 
@@ -290,11 +316,10 @@ td{
 	height: 8px;
 }
 .nav-bar-ind {
-    z-index: 1000;
 	position: absolute;
 	height: 8px;
 	margin-bottom: 80px;
-	margin-left: 2255px;
+	margin-right: 277.5px;
 	width: 92.5px;
 	height: 8px;
 	transition: 0.25s ease-in-out;
@@ -302,15 +327,15 @@ td{
 }
 
 .pos-1 {
-	margin-left: 225px;
-    background-color: var(--yellow);
+	margin-right: 277.5px;
 }
 .pos-2 {
-	margin-left: 290px;
+	margin-right: 102px;
 }
 .pos-3 {
-	margin-left: 365px;
+	margin-left: 345px;
 }
 .pos-4 {
-	margin-left: 443px;
+	margin-left: 545px;
 }
+
