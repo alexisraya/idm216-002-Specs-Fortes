@@ -1,8 +1,7 @@
 @font-face{
     font-family: 'Lemon Milk';
     src: url("../fonts/lemon_milk/LEMONMILK-Bold.woff2") format('woff2');
-  }
-  
+}
 @font-face {
     font-family: 'Inter';
     src: url("../fonts/inter/Inter-Regular.woff2") format("woff2");
@@ -15,17 +14,28 @@
     font-family: 'Walter';
     src: url("../fonts/walter_turncoat/WalterTurncoat-Regular.woff2") format("woff2");
 }
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url("../fonts/lexend_deca/LexendDeca-VariableFont_wght.woff2") format("woff2");
+}
 
 html, body{
     padding: 0;
     margin: 0;
 }
 
-h1{
-    font-family: 'Lemon Milk', Arial, Helvetica, sans-serif;
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    margin: 0;
 }
+
+h3{
+    font-size: 1rem;
+}
+
 p{
     font-family: 'Avenir', Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 .header{
@@ -161,6 +171,7 @@ footer{
     justify-items: center;
     justify-content: center;
     justify-self: flex-end;
+    text-align: center;
 }
 
 
@@ -173,6 +184,48 @@ footer{
 .admin-buttons{
     column-gap: 40px;
     display: flex;
+}
+
+.table-container{
+    overflow-x: auto;
+    padding: 20px 30px;
+}
+
+/* Menu Item Styles */
+.menu_item_container{
+    align-items: center;
+    border: 1px black solid;
+    border-radius: 13px;
+    display: flex;
+    column-gap: 22px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px 12px;
+    width: 361px;
+    min-height: 123px;
+}
+
+.menu_item_title{
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    text-align: left;
+}
+
+.menu_item_description{
+    font-size: .875rem;
+    margin: 0;
+    padding: 0px 0px 5px 0px;
+    text-align: left;
+}
+
+.menu_item_price{
+    font-size: .93rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0px 0px 0px 0px;
+    text-align: right;
 }
 
 table{
