@@ -45,7 +45,7 @@ html, body{
 }
 
 .main_container{
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -82,6 +82,16 @@ footer{
     height: 100px;
     justify-content: center;
     text-align: center;
+}
+
+.background-image{
+    z-index: -1;
+    position: fixed;
+    width: 105%;
+    height: 100%;
+    left: -5px;
+    top: 0px;
+    object-fit: cover;
 }
 
 /* Table Styles */
@@ -162,6 +172,7 @@ td{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .login__title{
@@ -257,7 +268,7 @@ td{
     color: var(--yellow);
 }
 .navbar-container{
-    position: absolute;
+    position: sticky;
     bottom: 0;
     background-color: var(--grey);
     border-top: 8px solid var(--grey);

@@ -1,4 +1,5 @@
 // NAVBAR
+const navbar = document.getElementById("navbar");
 const navbarind = document.getElementById("navbarind");
 const home = document.getElementById("menu-home");
 const order = document.getElementById("menu-order");
@@ -31,6 +32,13 @@ function goAccount(){
 	navbarind.classList.remove("pos-3");
 	navbarind.classList.add("pos-4");
 }
+
+// if(current_url.includes("login")){
+// 	navbar.style.display = "none";
+// }
+// else{
+// 	navbar.style.display = "block";
+// }
 
 if (current_url.includes("order")) {
 	goOrder();
