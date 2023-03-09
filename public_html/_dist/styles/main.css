@@ -319,10 +319,10 @@ td{
 	position: absolute;
 	height: 8px;
 	margin-bottom: 80px;
-	margin-right: 277.5px;
+	/* margin-right: 277.5px; */
 	width: 92.5px;
 	height: 8px;
-	transition: 0.25s ease-in-out;
+	transition: 0.2s ease-in-out;
 	background-color: #f4b029;
 }
 
@@ -333,9 +333,8 @@ td{
 	margin-right: 102px;
 }
 .pos-3 {
-	margin-left: 345px;
+	margin-right: -75px;
 }
 .pos-4 {
-	margin-left: 545px;
+	margin-right: -270px;
 }
-

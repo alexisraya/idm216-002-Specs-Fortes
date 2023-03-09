@@ -1,6 +1,6 @@
 <?php
 include_once __DIR__ . '/../app.php';
-$page_title = 'Sign In';
+$page_title = 'Log In';
 include_once __DIR__ . '/../_components/header.php';
 ?>
 
