@@ -14,22 +14,24 @@
         while ($menuItem = mysqli_fetch_assoc($result)){
                 $price = '$' . number_format($menuItem['price']/100, 2);
             echo "
-                <div class='menu_item_container'>
-                    <div class='menu_item_image'>
-                    <img src='http://placehold.it/83x92' alt='Menu Item Image'>
+                <a class='menu_item_link' href='{$site_url}/final/order/customize.php?id={$menuItem['id']}'>
+                    <div class='menu_item_container'>
+                        <div class='menu_item_image'>
+                        <img src='http://placehold.it/83x92' alt='Menu Item Image'>
+                        </div>
+                        <div class='menu_item_text'>
+                            <div class='menuItem_title'>
+                                <h3>{$menuItem['name']}</h3>
+                            </div>
+                            <div class='menu_item_description'>
+                                <p>{$menuItem['item_description']}</p>
+                            </div>
+                            <div class='menu_item_price'>
+                                <p>$price</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class='menu_item_text'>
-                        <div class='menuItem_title'>
-                            <h3>{$menuItem['name']}</h3>
-                        </div>
-                        <div class='menu_item_description'>
-                            <p>{$menuItem['item_description']}</p>
-                        </div>
-                        <div class='menu_item_price'>
-                            <p>$price</p>
-                        </div>
-                    </div>
-                </div>
+                </a>
             ";
         }
     ?>

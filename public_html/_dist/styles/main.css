@@ -282,9 +282,10 @@ td{
 }
 
 .menu_container{
+    align-self: center;
     display: flex;
     flex-direction: column;
-    padding: 0px 16px;
+    padding: 0px 0px 60px 0px;
 }
 
 /* Menu Item Styles */
@@ -326,6 +327,26 @@ td{
     text-align: right;
 }
 
+.menu_item_link{
+    text-decoration: none;
+}
+
+/* CUSTOMIZE PAGE */
+.order_header{
+    align-items: center;
+    background-color: var(--yellow);
+    display: flex;
+    height: 43px;
+    justify-content: center;
+    width: 100%;
+}
+
+.order_title{
+    color: var(--black);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    text-align: center;
+}
 /* Login Page */
 .login_container{
     align-items: center;
@@ -438,9 +459,6 @@ td{
     height: 108px;
 }
 /* NAVBAR FROM CODEPEN */
-
-
-
 .nav-nav-container {
 	width: 100%;
 	display: flex;

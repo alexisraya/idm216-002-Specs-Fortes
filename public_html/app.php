@@ -32,6 +32,7 @@ include_once __DIR__ . '/_includes/database.php';
 include_once __DIR__ . '/_includes/helper-functions.php';
 include_once __DIR__ . '/_includes/menu-functions.php';
 include_once __DIR__ . '/_includes/user-functions.php';
+include_once __DIR__ . '/_includes/cart-functions.php';
 
 // Check if URL has "/admin" in it. We can assume that if it does,
 // we're in the admin area and the user needs to be logged in
