@@ -9,7 +9,7 @@
 <div class='menu_category'>
     <h2 class='category_title'>SPECIALS</h2>
     <?php
-        $query = "SELECT * FROM menu WHERE menu_category = 'burgers'";
+        $query = "SELECT * FROM menu WHERE category = 'specials'";
         $result = mysqli_query($db_connection, $query);
         while ($menuItem = mysqli_fetch_assoc($result)){
                 $price = '$' . number_format($menuItem['price']/100, 2);
@@ -38,7 +38,7 @@
 <div class='menu_category'>
     <h2 class='category_title'>BURGERS</h2>
     <?php
-        $query = "SELECT * FROM menu WHERE menu_category = 'burgers'";
+        $query = "SELECT * FROM menu WHERE category = 'burgers'";
         $result = mysqli_query($db_connection, $query);
         while ($menuItem = mysqli_fetch_assoc($result)){
             $price = '$' . number_format($menuItem['price']/100, 2);
@@ -67,7 +67,7 @@
 <div class='menu_category'>
     <h2 class='category_title'>SIDES</h2>
     <?php
-        $query = "SELECT * FROM menu WHERE menu_category = 'sides'";
+        $query = "SELECT * FROM menu WHERE category = 'sides'";
         $result = mysqli_query($db_connection, $query);
         while ($menuItem = mysqli_fetch_assoc($result)) {
             $price = '$' . number_format($menuItem['price']/100, 2);
