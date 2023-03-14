@@ -33,13 +33,6 @@ function goAccount(){
 	navbarind.classList.add("pos-4");
 }
 
-// if(current_url.includes("login")){
-// 	navbar.style.display = "none";
-// }
-// else{
-// 	navbar.style.display = "block";
-// }
-
 if (current_url.includes("order")) {
 	goOrder();
 }
