@@ -15,9 +15,14 @@
         while ($topping = mysqli_fetch_assoc($result)){
             $price = '$' . number_format($topping['price']/100, 2);
             $image_path = $site_url.$topping['image_path'];
+            $name = $topping['name'];
+            $name = strtolower($name);
+            $name = str_replace(" ", "_", $name);
+            $topping_class = "js-" . $name . "-btn";
+            $topping_img_class = "js-" . $name . "-btn-img";
             echo"
-                <div class='toppings_image'>
-                    <img class='toppings_image--img' src='{$image_path}' alt='{$topping['name']}'/>
+                <div class='toppings_image {$topping_class}'>
+                    <img class='toppings_image--img {$topping_img_class}' src='{$image_path}' alt='{$topping['name']}'/>
                     <p class='toppings_title'>{$topping['name']}</p>
             ";
             if ($topping['price']>0){

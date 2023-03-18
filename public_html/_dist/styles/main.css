@@ -653,6 +653,7 @@ td{
     flex-direction: column;
     justify-content: center;
     row-gap: 35px;
+    margin: 0 0 0 -40px;
     padding: 0px 15px;
 }
 
@@ -704,8 +705,23 @@ td{
     text-align: left;
 }
 
+.math_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 10px;
+    height: 8px;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    border-radius: 100px;
+}
+.math_btn:hover{
+    cursor: pointer;
+}
+
 .plus-text, .minus-text{
-    color: var(--white);
+    color: var(--black);
     font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: 200;
@@ -714,4 +730,8 @@ td{
 .selected{
     background-color: var(--red);
     border: 3px solid var(--black);
+}
+
+.hide{
+    display: none;
 }

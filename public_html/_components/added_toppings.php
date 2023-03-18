@@ -12,25 +12,34 @@
             $result = mysqli_query($db_connection, $query);
             while ($topping = mysqli_fetch_assoc($result)){
                 $id = "topping_" . $topping['id'];
-                $unique_class = "js-" . $topping['name'];
-                $unique_class = str_replace(" ", "_", $unique_class);
+                $name = $topping['name'];
+                $name = strtolower($name);
+                $name = str_replace(" ", "_", $name);
+                $topping_class = "js-" . $name . "-modal";
+                $minus_class =  "js-minus-" . $name;
+                $minus_class_text =  $minus_class . "-text";
+                $plus_class =  "js-plus-" . $name;
+                $plus_class_text =  $plus_class . "-text";
+                $value_class =  "js-value-" . $name;
+
                 $image_path = $site_url.$topping['image_path'];
+
                 echo"
-                <div class='added_topping {$unique_class}' id='{$id}'>
-                    <div class='math_btn minus js-minus'>
-                        <p class='minus-text js-minus-text'>-</p>
+                <div class='added_topping {$topping_class} hide' id='{$id}'>
+                    <div class='math_btn minuss {$minus_class}'>
+                        <p class='minus-text {$minus_class_text}'>-</p>
                     </div>
                     <div class='added_topping_info'>
                         <div class='added_topping_img'>
                             <img class='added_topping--img' src='{$image_path}' alt='{$topping['name']}'>
                         
-                            <span class='value-label btn-text js-value'>1</span>
+                            <span class='value-label btn-text {$value_class}'>1</span>
                         </div>
                          <p class='added_topping_title'>{$topping['name']}</p>
                     </div>
                     
-                    <div class='math_btn plus js-plus'>
-                        <p class='plus-text js-plus-text'>+</p>
+                    <div class='math_btn plus {$plus_class}'>
+                        <p class='plus-text {$plus_class_text}'>+</p>
                     </div>
                 </div>
                 ";

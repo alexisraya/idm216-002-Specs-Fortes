@@ -44,7 +44,7 @@ include_once __DIR__ . '/../../_components/order_header.php';
 
     echo"
         <div class='order_footer'>
-            <h1 class='order_price'>{$price}</h1>
+            <h1 class='order_price js-order-price'>{$price}</h1>
             <button class='button add_cart_button'>ADD TO CART</buttom>
         </div>
     ";
