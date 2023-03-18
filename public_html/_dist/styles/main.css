@@ -344,6 +344,13 @@ td{
 .order_title{
     color: var(--black);
     font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.top_nav_title{
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     text-align: center;
 }
@@ -528,4 +535,62 @@ td{
 }
 .pos-4 {
 	margin-right: -270px;
+}
+
+/* Topping Styles */
+.toppings_container{
+    border: 3px solid var(--white);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    max-width: 770px;
+    padding: 25px 15px;
+}
+
+.toppings_container_title{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 0 35px 0;
+    text-align: left;
+}
+
+.toppings_images{
+    align-items: start;
+    display: grid;
+    column-gap: auto;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 44px;
+}
+
+.toppings_image{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5px;
+}
+
+.toppings_image--img{
+    background-color: var(--white);
+    border: 3px solid var(--red);
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+}
+
+.toppings_title, .toppings_price{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.selected{
+    background-color: var(--red);
+    border: 3px solid var(--black);
 }

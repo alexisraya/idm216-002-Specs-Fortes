@@ -5,6 +5,7 @@ include_once __DIR__ . '/../../app.php';
 $id = sanitize_value($_GET['id']);
 $query = "SELECT * FROM menu WHERE id='{$id}'";
 $result = mysqli_query($db_connection, $query);
+$menuItems = get_menu();
 if ($result->num_rows > 0) {
     // Get row from results and assign to $menuItem variable;
     $menuItem = mysqli_fetch_assoc($result);
@@ -26,13 +27,19 @@ include_once __DIR__ . '/../../_components/order_header.php';
             </a>
             <h1 class='top_nav_title'>{$menuItem['name']}</h1>
         </div>
+    ";
+
+    include_once __DIR__ . '/../../_components/toppings.php';
         
+    echo"
         <div class='order_footer'>
-            <h1 class='order_price'>{$menuItem['name']}</h1>
+            <h1 class='order_price'>{$menuItem['price']}</h1>
             <button class='button add_cart_button'>Add to Cart</buttom>
         </div>
     ";
 ?>
+
+
 
 <?php
 include_once __DIR__ . '/../../_components/footer.php';
