@@ -133,7 +133,10 @@ td{
 }
 
 .button{
+    border-style: none;
     border-radius: 35px;
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-weight: 500;
     padding: 15px 22px;
     text-decoration: none;
     text-align: center;
@@ -348,11 +351,58 @@ td{
     text-align: center;
 }
 
+.order_price{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.top_nav{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 1fr;
+    padding: 30px 15px;
+}
+
 .top_nav_title{
     color: var(--white);
     font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
     font-size: 1.125rem;
     text-align: center;
+}
+
+.order_footer{
+    align-items: center;
+    background-color: var(--red);
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+    padding: 45px 35px;
+}
+
+.add_cart_button{
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.add_cart_button:hover{
+    background-color: var(--white);
+    color: var(--grey);
+}
+
+.order_item_info{
+    align-self: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    column-gap: 10px;
+    padding: 30px 15px;
+    max-width: 400px;
+}
+
+.info_text{
+    color: var(--white);
 }
 /* Login Page */
 .login_container{
@@ -464,6 +514,7 @@ td{
     border-top: 8px solid var(--grey);
     width: 100%;
     height: 108px;
+    z-index: 100;
 }
 /* NAVBAR FROM CODEPEN */
 .nav-nav-container {
@@ -539,6 +590,7 @@ td{
 
 /* Topping Styles */
 .toppings_container{
+    align-self: center;
     border: 3px solid var(--white);
     border-radius: 16px;
     display: flex;
@@ -571,7 +623,7 @@ td{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 5px;
+    row-gap: 0px;
 }
 
 .toppings_image--img{
@@ -581,6 +633,10 @@ td{
     height: 80px;
     width: 80px;
 }
+.toppings_image--img:hover{
+    background-color: var(--red);
+    cursor: pointer;
+}
 
 .toppings_title, .toppings_price{
     color: var(--white);
@@ -588,6 +644,71 @@ td{
     font-size: 1rem;
     font-weight: 200;
     text-align: center;
+}
+
+.added_toppings_container{
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 35px;
+    padding: 0px 15px;
+}
+
+.added_topping{
+    align-self: center;
+    align-items: center;
+    display: grid;
+    column-gap: 22px;
+    grid-template-columns: 10% 80% 10%;
+    width: 100%;
+}
+
+.added_topping_info{
+    align-items: center;
+    column-gap: 43px;
+    display: flex;
+}
+
+.added_topping_img{
+    display: flex;
+}
+.added_topping--img{
+    background-color: var(--red);
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+
+.value-label{
+    background-color: var(--white);
+    border: 1px solid var(--red);
+    border-radius: 50px;
+    color: var(--black);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    height: 25px;
+    width: 25px;
+    margin: -5px 0px 0px -15px;
+    padding: 5px 9px;
+    z-index: 4;
+}
+
+.added_topping_title{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.plus-text, .minus-text{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
 }
 
 .selected{

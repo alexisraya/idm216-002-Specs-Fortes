@@ -22,19 +22,30 @@ include_once __DIR__ . '/../../_components/order_header.php';
     $site_url = site_url();
     echo"
         <div class='top_nav'>
-            <a href='{$site_url}/final/order/index.php'>
-                <img src='<{$site_url}/../../_dist/images/final/arrow.png' alt='back'>
+            <a class='back_button' href='{$site_url}/final/order/index.php'>
+                <img src='{$site_url}/../../_dist/images/final/arrow.png' alt='back'>
             </a>
             <h1 class='top_nav_title'>{$menuItem['name']}</h1>
         </div>
     ";
 
     include_once __DIR__ . '/../../_components/toppings.php';
-        
+
+    echo"
+        <div class='order_item_info'>
+            <img class='info-icon' src='{$site_url}/../../_dist/images/final/info-icon.png' alt='info'>
+            <p class='info_text'>{$menuItem['item_description']}</p>
+        </div>
+    ";
+    
+    include_once __DIR__ . '/../../_components/added_toppings.php';
+
+    $price = '$' . number_format($menuItem['price']/100, 2);
+
     echo"
         <div class='order_footer'>
-            <h1 class='order_price'>{$menuItem['price']}</h1>
-            <button class='button add_cart_button'>Add to Cart</buttom>
+            <h1 class='order_price'>{$price}</h1>
+            <button class='button add_cart_button'>ADD TO CART</buttom>
         </div>
     ";
 ?>

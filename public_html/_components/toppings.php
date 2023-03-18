@@ -22,7 +22,7 @@
             ";
             if ($topping['price']>0){
                 echo"
-                    <p class='toppings_price'>$price</p>
+                    <p class='toppings_price'>(+$price)</p>
                 ";
             }
             echo"

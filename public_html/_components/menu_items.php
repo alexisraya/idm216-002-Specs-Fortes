@@ -45,8 +45,9 @@
         while ($menuItem = mysqli_fetch_assoc($result)){
             $price = '$' . number_format($menuItem['price']/100, 2);
             echo "
+                <a class='menu_item_link' href='{$site_url}/final/order/customize.php?id={$menuItem['id']}'>
                 <div class='menu_item_container'>
-                    <div class='menuItem_image'>
+                    <div class='menu_item_image'>
                     <img src='http://placehold.it/83x92' alt='Menu Item Image'>
                     </div>
                     <div class='menu_item_text'>
@@ -61,7 +62,8 @@
                         </div>
                     </div>
                 </div>
-            ";
+            </a>
+        ";
         }
     ?>
 </div>
