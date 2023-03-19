@@ -21,19 +21,19 @@
                 $plus_class =  "js-plus-" . $name;
                 $plus_class_text =  $plus_class . "-text";
                 $value_class =  "js-value-" . $name;
+                $input_id = "input-" . $topping['name'];
 
                 $image_path = $site_url.$topping['image_path'];
 
                 echo"
                 <div class='added_topping {$topping_class} hide' id='{$id}'>
-                    <div class='math_btn minuss {$minus_class}'>
+                    <div class='math_btn minus {$minus_class}'>
                         <p class='minus-text {$minus_class_text}'>-</p>
                     </div>
                     <div class='added_topping_info'>
                         <div class='added_topping_img'>
                             <img class='added_topping--img' src='{$image_path}' alt='{$topping['name']}'>
-                        
-                            <span class='value-label btn-text {$value_class}'>1</span>
+                            <span class='value-label btn-text {$value_class}'>0</span>
                         </div>
                          <p class='added_topping_title'>{$topping['name']}</p>
                     </div>
@@ -43,6 +43,7 @@
                     </div>
                 </div>
                 ";
+                
             }
         ?>
         <!-- <div class="added_topping js-bacon">
@@ -62,4 +63,6 @@
                 <p class="plus-text js-plus-text">+</p>
             </div>
         </div> -->
+
+        <!-- <span class='value-label btn-text {$value_class}'>0</span> -->
 </div>

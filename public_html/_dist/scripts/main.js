@@ -138,6 +138,10 @@ const formatter = new Intl.NumberFormat('en-US', {
 	currency: 'USD',
   });
 
+function updatePrice(){
+	document.getElementById("order_price").setAttribute("value", order_price);
+}
+
 bacon_plus_btn.addEventListener("click", function () {
 	if (bacon_ammount <5) {
 		bacon_ammount+=1;
@@ -145,6 +149,7 @@ bacon_plus_btn.addEventListener("click", function () {
 		order_price +=2;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 bacon_minus_btn.addEventListener("click", function () {
 	if (bacon_ammount >1) {
@@ -160,6 +165,7 @@ bacon_minus_btn.addEventListener("click", function () {
 		order_price -=2;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 
 egg_plus_btn.addEventListener("click", function () {
@@ -169,6 +175,7 @@ egg_plus_btn.addEventListener("click", function () {
 		order_price +=1;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 egg_minus_btn.addEventListener("click", function () {
 	if (egg_ammount >1) {
@@ -184,6 +191,7 @@ egg_minus_btn.addEventListener("click", function () {
 		order_price -=1;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 
 mushroom_plus_btn.addEventListener("click", function () {
@@ -193,6 +201,7 @@ mushroom_plus_btn.addEventListener("click", function () {
 		order_price +=1;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 mushroom_minus_btn.addEventListener("click", function () {
 	if (mushroom_ammount >1) {
@@ -208,6 +217,7 @@ mushroom_minus_btn.addEventListener("click", function () {
 		order_price -=1;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 
 onions_plus_btn.addEventListener("click", function () {
@@ -217,6 +227,7 @@ onions_plus_btn.addEventListener("click", function () {
 		order_price +=1;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 onions_minus_btn.addEventListener("click", function () {
 	if (onions_ammount >1) {
@@ -232,6 +243,7 @@ onions_minus_btn.addEventListener("click", function () {
 		order_price -=1;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 
 meat_plus_btn.addEventListener("click", function () {
@@ -241,6 +253,7 @@ meat_plus_btn.addEventListener("click", function () {
 		order_price +=5;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 meat_minus_btn.addEventListener("click", function () {
 	if (meat_ammount >1) {
@@ -256,6 +269,7 @@ meat_minus_btn.addEventListener("click", function () {
 		order_price -=5;
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
+	updatePrice();
 });
 
 tomato_plus_btn.addEventListener("click", function () {
@@ -263,6 +277,7 @@ tomato_plus_btn.addEventListener("click", function () {
 		tomato_ammount+=1;
 		tomato_value.innerHTML = tomato_ammount.toString();
 	}
+	updatePrice();
 });
 tomato_minus_btn.addEventListener("click", function () {
 	if (tomato_ammount >1) {
@@ -274,6 +289,7 @@ tomato_minus_btn.addEventListener("click", function () {
 		tomato_btn_img.classList.remove("selected");
 		tomato_ammount = 0;
 	}
+	updatePrice();
 });
 
 lettuce_plus_btn.addEventListener("click", function () {
@@ -281,6 +297,7 @@ lettuce_plus_btn.addEventListener("click", function () {
 		lettuce_ammount+=1;
 		lettuce_value.innerHTML = lettuce_ammount.toString();
 	}
+	updatePrice();
 });
 lettuce_minus_btn.addEventListener("click", function () {
 	if (lettuce_ammount >1) {
@@ -292,6 +309,7 @@ lettuce_minus_btn.addEventListener("click", function () {
 		lettuce_btn_img.classList.remove("selected");
 		lettuce_ammount = 0;
 	}
+	updatePrice();
 });
 
 pickles_plus_btn.addEventListener("click", function () {
@@ -299,6 +317,7 @@ pickles_plus_btn.addEventListener("click", function () {
 		pickles_ammount+=1;
 		pickles_value.innerHTML = pickles_ammount.toString();
 	}
+	updatePrice();
 });
 pickles_minus_btn.addEventListener("click", function () {
 	if (pickles_ammount >1) {
@@ -310,6 +329,7 @@ pickles_minus_btn.addEventListener("click", function () {
 		pickles_btn_img.classList.remove("selected");
 		pickles_ammount = 0;
 	}
+	updatePrice();
 });
 
 /* FUNCTIONALITY TO SHOW THE TOPPING MODAL WHEN THE RESPECTIVE TOPPING BUTTON IS CLICKED */
@@ -329,6 +349,7 @@ bacon_btn.addEventListener("click", function () {
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
 	bacon_value.innerHTML = bacon_ammount.toString();
+	updatePrice();
 });
 
 egg_btn.addEventListener("click", function () {
@@ -347,6 +368,7 @@ egg_btn.addEventListener("click", function () {
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
 	egg_value.innerHTML = egg_ammount.toString();
+	updatePrice();
 });
 
 mushroom_btn.addEventListener("click", function () {
@@ -365,6 +387,7 @@ mushroom_btn.addEventListener("click", function () {
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
 	mushroom_value.innerHTML = mushroom_ammount.toString();
+	updatePrice();
 });
 
 onions_btn.addEventListener("click", function () {
@@ -383,6 +406,7 @@ onions_btn.addEventListener("click", function () {
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
 	onions_value.innerHTML = onions_ammount.toString();
+	updatePrice();
 });
 
 meat_btn.addEventListener("click", function () {
@@ -401,6 +425,7 @@ meat_btn.addEventListener("click", function () {
 		order_price_obj.innerHTML = formatter.format(order_price);
 	}
 	meat_value.innerHTML = meat_ammount.toString();
+	updatePrice();
 });
 
 tomato_btn.addEventListener("click", function () {
@@ -415,6 +440,7 @@ tomato_btn.addEventListener("click", function () {
 		tomato_ammount = 0;
 	}
 	tomato_value.innerHTML = tomato_ammount.toString();
+	updatePrice();
 });
 
 lettuce_btn.addEventListener("click", function () {
@@ -429,6 +455,7 @@ lettuce_btn.addEventListener("click", function () {
 		lettuce_ammount = 0;
 	}
 	lettuce_value.innerHTML = lettuce_ammount.toString();
+	updatePrice();
 });
 
 pickles_btn.addEventListener("click", function () {
@@ -443,4 +470,47 @@ pickles_btn.addEventListener("click", function () {
 		pickles_ammount = 0;
 	}
 	pickles_value.innerHTML = pickles_ammount.toString();
+	updatePrice();
+});
+
+/* TEMPERATURE MODAL ELEMENTS */
+const rare_btn = document.querySelector(".js-rare-btn");
+const rare_title = document.querySelector(".js-rare-title");
+const medium_btn = document.querySelector(".js-medium-btn");
+const medium_title = document.querySelector(".js-medium-title");
+const well_done_btn = document.querySelector(".js-well-done-btn");
+const well_done_title = document.querySelector(".js-well-done-title");
+
+/* TEMPERATURE MODAL FUNCTIONALITY */
+rare_btn.addEventListener("click", function () {
+	rare_btn.classList.toggle("temperature_selected");
+	rare_title.classList.toggle("temperature_selected");
+
+	medium_btn.classList.remove("temperature_selected");
+	medium_title.classList.remove("temperature_selected");
+
+	well_done_btn.classList.remove("temperature_selected");
+	well_done_title.classList.remove("temperature_selected");
+});
+
+medium_btn.addEventListener("click", function () {
+	medium_btn.classList.toggle("temperature_selected");
+	medium_title.classList.toggle("temperature_selected");
+
+	rare_btn.classList.remove("temperature_selected");
+	rare_title.classList.remove("temperature_selected");
+
+	well_done_btn.classList.remove("temperature_selected");
+	well_done_title.classList.remove("temperature_selected");
+});
+
+well_done_btn.addEventListener("click", function () {
+	well_done_btn.classList.toggle("temperature_selected");
+	well_done_title.classList.toggle("temperature_selected");
+
+	rare_btn.classList.remove("temperature_selected");
+	rare_title.classList.remove("temperature_selected");
+
+	medium_btn.classList.remove("temperature_selected");
+	medium_title.classList.remove("temperature_selected");
 });

@@ -38,18 +38,37 @@ include_once __DIR__ . '/../../_components/order_header.php';
         </div>
     ";
     
+    echo"
+        <form class='customize_form' action='{$site_url}/../../_includes/add_order.php' method='POST'>
+            <input type='hidden' name='item_name' value='{$menuItem['name']}'>
+    ";
     include_once __DIR__ . '/../../_components/added_toppings.php';
+    include_once __DIR__ . '/../../_components/temperature_modal.php';
 
     $price = '$' . number_format($menuItem['price']/100, 2);
 
     echo"
-        <div class='order_footer'>
-            <h1 class='order_price js-order-price'>{$price}</h1>
-            <button class='button add_cart_button'>ADD TO CART</buttom>
-        </div>
+            <div class='order_footer'>
+                <h1 class='order_price js-order-price'>{$price}</h1>
+                <input type='hidden' name='item_price' id='order_price' value='{$price}'>
+                <button class='button add_cart_button' type='submit'>ADD TO CART</button>
+            </div>
+        </form>
     ";
 ?>
 
+<!-- <script>
+    const current_price = document.querySelector(".js-order-price");
+
+    let new_order_price = Number(current_price.innerHTML.substring(1));
+
+    let price = <?php echo $menuItem['price']; ?>;
+    price = price / 100;
+
+    function updatePrice(){
+        document.getElementById("order_price").setAttribute("value", new_order_price);
+    }
+</script> -->
 
 
 <?php

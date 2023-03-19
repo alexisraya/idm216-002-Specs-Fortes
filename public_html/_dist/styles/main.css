@@ -601,7 +601,7 @@ td{
     padding: 25px 15px;
 }
 
-.toppings_container_title{
+.toppings_container_title ,.temperature_container_title{
     color: var(--white);
     font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
     font-size: 1.25rem;
@@ -662,8 +662,8 @@ td{
     align-items: center;
     display: grid;
     column-gap: 22px;
-    grid-template-columns: 10% 80% 10%;
-    width: 100%;
+    grid-template-columns: 15% 70% 15%;
+    width: 70%;
 }
 
 .added_topping_info{
@@ -716,6 +716,13 @@ td{
     border: 1px solid transparent;
     border-radius: 100px;
 }
+.minus{
+    justify-self: start;
+}
+
+.plus{
+    justify-self: end;
+}
 .math_btn:hover{
     cursor: pointer;
 }
@@ -725,6 +732,7 @@ td{
     font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     font-weight: 200;
+    margin: -2px 0 0 0;
 }
 
 .selected{
@@ -734,4 +742,47 @@ td{
 
 .hide{
     display: none;
+}
+
+/* Temperature Styles */
+.temperature_container{
+    align-self: center;
+    row-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 25px 15px;
+}
+.temperature_container_title{
+    margin: 0;
+}
+.temperature_images{
+    align-self: center;
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.temperature_image{
+    align-items: center;
+    border: 3px solid var(--yellow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 90px;
+    justify-content: center;
+    padding: 12px 8px;
+    row-gap: 10px;
+    width: 100px;
+}
+.temperature_title{
+    color: var(--yellow);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.temperature_selected{
+    color: var(--white);
+    background-color: var(--medgrey);
+    border-color: var(--yellow);
 }
