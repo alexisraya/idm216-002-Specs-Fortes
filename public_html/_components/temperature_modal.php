@@ -24,3 +24,47 @@
         </label>
     </div>
 </div>
+
+<script>
+/* TEMPERATURE MODAL ELEMENTS */
+const rare_btn = document.querySelector(".js-rare-btn");
+const rare_title = document.querySelector(".js-rare-title");
+const medium_btn = document.querySelector(".js-medium-btn");
+const medium_title = document.querySelector(".js-medium-title");
+const well_done_btn = document.querySelector(".js-well-done-btn");
+const well_done_title = document.querySelector(".js-well-done-title");
+
+/* TEMPERATURE MODAL FUNCTIONALITY */
+rare_btn.addEventListener("click", function () {
+	rare_btn.classList.toggle("temperature_selected");
+	rare_title.classList.toggle("temperature_selected");
+
+	medium_btn.classList.remove("temperature_selected");
+	medium_title.classList.remove("temperature_selected");
+
+	well_done_btn.classList.remove("temperature_selected");
+	well_done_title.classList.remove("temperature_selected");
+});
+
+medium_btn.addEventListener("click", function () {
+	medium_btn.classList.toggle("temperature_selected");
+	medium_title.classList.toggle("temperature_selected");
+
+	rare_btn.classList.remove("temperature_selected");
+	rare_title.classList.remove("temperature_selected");
+
+	well_done_btn.classList.remove("temperature_selected");
+	well_done_title.classList.remove("temperature_selected");
+});
+
+well_done_btn.addEventListener("click", function () {
+	well_done_btn.classList.toggle("temperature_selected");
+	well_done_title.classList.toggle("temperature_selected");
+
+	rare_btn.classList.remove("temperature_selected");
+	rare_title.classList.remove("temperature_selected");
+
+	medium_btn.classList.remove("temperature_selected");
+	medium_title.classList.remove("temperature_selected");
+});
+</script>
