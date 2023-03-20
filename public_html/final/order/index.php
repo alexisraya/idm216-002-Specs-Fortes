@@ -2,6 +2,7 @@
 include_once __DIR__ . '/../../app.php';
 $page_title = 'Order';
 include_once __DIR__ . '/../../_components/header.php';
+$page_title = 'Menu';
 $menuItems = get_menu();
 ?>
 

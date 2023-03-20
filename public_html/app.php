@@ -37,8 +37,18 @@ include_once __DIR__ . '/_includes/cart-functions.php';
 // Check if URL has "/admin" in it. We can assume that if it does,
 // we're in the admin area and the user needs to be logged in
 //change later if you want to give accesss to other pages
-if (strpos($_SERVER['REQUEST_URI'], '/admin/menu/index.php') !== false) {
-    if (!is_user_logged_in()) {
-        redirect_to('/login/index.php');
-    }
+// if (strpos($_SERVER['REQUEST_URI'], '/admin/menu/index.php') !== false) {
+//     if (!is_user_logged_in()) {
+//         redirect_to('/login/index.php');
+//     }
+// }
+
+$isLoginPage= strpos($_SERVER['REQUEST_URI'], '/auth/login.php') !== false;
+$sessionUserId = $_SESSION['user']['id'] ?? null;
+$user = $sessionUserId ? get_user_by_id($sessionUserId) : create_guest_user();
+
+$userOrder = null;
+if ($user) {
+    $currentUserOrder = getOrderByUserId($user['id']);
+    $userOrder= mysqli_fetch_array($currentUserOrder);
 }

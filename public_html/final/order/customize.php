@@ -53,23 +53,11 @@ include_once __DIR__ . '/../../_components/order_header.php';
                 <input type='hidden' name='item_price' id='order_price' value='{$price}'>
                 <button class='button add_cart_button' type='submit'>ADD TO CART</button>
             </div>
-        </form>
     ";
 ?>
-
-<!-- <script>
-    const current_price = document.querySelector(".js-order-price");
-
-    let new_order_price = Number(current_price.innerHTML.substring(1));
-
-    let price = <?php echo $menuItem['price']; ?>;
-    price = price / 100;
-
-    function updatePrice(){
-        document.getElementById("order_price").setAttribute("value", new_order_price);
-    }
-</script> -->
-
+            <input type='hidden' name='order_id' id='order_id' value='<?php echo $userOrder['id'] ?>'>
+            <input type='hidden' name='menu_item_id' id='menu_id' value='<?php echo $menuItem['id'] ?>'>
+        </form>
 
 <?php
 include_once __DIR__ . '/../../_components/footer.php';

@@ -10,10 +10,12 @@ if (!$_POST) {
 $item_name = sanitize_value($_POST['item_name']);
 $item_price = sanitize_value($_POST['item_price']);
 $item_price = (float)$item_price;
+$order_id = sanitize_value($_POST['order_id']);
+$menu_item_id = sanitize_value($_POST['menu_item_id']);
 
 $query = "INSERT INTO cart";
-$query .=" (item_name, price)";
-$query .= " VALUES('{$item_name}', '{$item_price}')";
+$query .=" (item_name, price, order_id, menu_item_id)";
+$query .= " VALUES('{$item_name}', '{$item_price}', '{$order_id}', '{$menu_item_id}')";
 
 $result = mysqli_query($db_connection, $query);
 

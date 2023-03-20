@@ -72,3 +72,19 @@ function is_user_logged_in()
 {
     return isset($_SESSION['user']);
 }
+
+function getAllCartItems($orderId){
+    global $db_connection;
+    $query ="SELECT
+    cart.id AS cart_item_id,
+    menu.id AS menu_item_id,
+    cart.quantity,
+    menu.name,
+    cart.price,
+    menu.item_description,
+    menu.image_path
+    FROM cart INNER JOIN menu ON cart.menu_item_id = menu.id 
+    WHERE cart.order_id = '{$orderId}'";
+    $result = mysqli_query($db_connection, $query);
+    return $result;
+}
