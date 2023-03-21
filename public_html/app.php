@@ -50,5 +50,7 @@ $user = $sessionUserId ? get_user_by_id($sessionUserId) : create_guest_user();
 $userOrder = null;
 if ($user) {
     $currentUserOrder = getOrderByUserId($user['id']);
+    // var_dump($currentUserOrder);
     $userOrder= mysqli_fetch_array($currentUserOrder);
+    // var_dump($userOrder);
 }

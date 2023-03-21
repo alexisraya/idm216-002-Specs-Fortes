@@ -831,6 +831,23 @@ td{
     justify-self: end;
 }
 
+.tip_title{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    justify-self: start;
+}
+.tip_price{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: right;
+    justify-self: end;
+}
+
 .yellow_line{
     background-color: var(--yellow);
     color: var(--yellow);
@@ -914,4 +931,162 @@ td{
 
 .cart_item_plus:hover{
     cursor: pointer;
+}
+
+/* TIP STYLES */
+.tip_container{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.tip_labels_container{
+    align-self: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+.tip_btns{
+    display: flex;
+    column-gap: 0px;
+}
+
+.tip_btn{
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 10px 8px;
+    margin: 0;
+}
+
+.start_tip{
+    border-radius: 11px 0 0 11px;
+}
+
+.end_tip{
+    border-radius: 0 11px 11px 0;
+}
+
+.tip_selected{
+    border: 1px solid var(--yellow);
+    background-color: var(--yellow);
+    font-weight: 500;
+}
+
+/* HIDE RADIO */
+[type=radio] { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+/* IMAGE STYLES */
+[type=radio] + img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+    outline: 3px solid var(--red);
+}
+
+.payment_icon{
+    border-radius: 50px;
+}
+
+.payment_method_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    padding: 10px 15px 30px 15px;
+}
+
+.payment_method{
+    align-items: center;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.payment_method p{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+}
+
+/* Order Confirmation Page Styles */
+.confirmation_container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0px;
+    height: 70vh;
+}
+
+.confirmation_text{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.confirmation_number{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+.confirmation_img_container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 20px 0;
+}
+.confirmation_img_text{
+    color: var(--yellow);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    padding: 15px 0 0 0;
+}
+.confirmation_img{
+    border: 2px solid var(--yellow);
+    border-radius: 100px;
+}
+
+.confirmation_location{
+    align-items: center;
+    column-gap: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0;
+}
+.confirmation_location_title{
+    color: var(--white);
+    font-size: 1.125rem;
+}
+.confirmation_location_address{
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.home_btn{
+    background-color: var(--red);
+    color: var(--white);
+}
+.home_btn:hover{
+    background-color: var(--white);
+    color: var(--red);
 }
