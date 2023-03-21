@@ -43,12 +43,9 @@ while ($cartItem = mysqli_fetch_array($cart))
                 </div>
             </div>
         </div>
-        <form action='{$site_url}/_includes/delete_cart_item.php' method='POST''>
-            <input name='cart' value='{$cartItem['cart_item_id']}' type='hidden'>
-            <button type='submit' class='cart_item_cancel'>
-                    <p class='cart_item_cancel--text'>X</p>
-            </button>
-        </form>
+        <div class='cart_item_cancel'>
+            <p class='cart_item_cancel--text'>X</p>
+        </div>
     </div>
 ";
 }

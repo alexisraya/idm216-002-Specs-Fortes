@@ -56,7 +56,6 @@ include_once __DIR__ . '/../../_components/order_header.php';
     ";
 ?>
             <input type='hidden' name='order_id' id='order_id' value='<?php echo $userOrder['id'] ?>'>
-			<?php //var_dump($userOrder['id']); ?>
             <input type='hidden' name='menu_item_id' id='menu_id' value='<?php echo $menuItem['id'] ?>'>
         </form>
 
