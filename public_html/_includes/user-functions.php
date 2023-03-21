@@ -94,8 +94,9 @@ function getUser() {
 function createNewOrderByUserId($userId){
     global $db_connection;
     $query = "INSERT INTO orders";
-    $query .="(user_id)";
-    $query .= "VALUES('{$userId}')";
+    $query .="(user_id, checkout_time)";
+    $query .= "VALUES('{$userId}', 'ASAP')";
+    var_dump($query);
     $result = mysqli_query($db_connection, $query);
     if(!$result){
         //TODO create error message
@@ -112,7 +113,9 @@ function getOrderByUserId($userId){
     } else{ 
         createNewOrderByUserId($userId);
         $query= "SELECT * FROM orders WHERE user_id = {$userId} AND status = 'active' LIMIT 1";
+        //var_dump($query);
         $result = mysqli_query($db_connection, $query);
+       //var_dump($result);
         return $result;
     }
 }

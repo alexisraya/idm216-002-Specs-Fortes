@@ -17,6 +17,8 @@ $query = "INSERT INTO cart";
 $query .=" (item_name, price, order_id, menu_item_id)";
 $query .= " VALUES('{$item_name}', '{$item_price}', '{$order_id}', '{$menu_item_id}')";
 
+var_dump($_POST);
+
 $result = mysqli_query($db_connection, $query);
 
 
