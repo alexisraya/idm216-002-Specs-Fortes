@@ -23,7 +23,7 @@ include_once __DIR__ . '/../../_components/order_header.php';
     echo"
         <div class='top_nav'>
             <a class='back_button' href='{$site_url}/final/order/index.php'>
-                <img src='{$site_url}/../../_dist/images/final/arrow.png' alt='back'>
+                <img src='{$site_url}/_dist/images/final/arrow.png' alt='back'>
             </a>
             <h1 class='top_nav_title'>{$menuItem['name']}</h1>
         </div>
@@ -33,13 +33,13 @@ include_once __DIR__ . '/../../_components/order_header.php';
 
     echo"
         <div class='order_item_info'>
-            <img class='info-icon' src='{$site_url}/../../_dist/images/final/info-icon.png' alt='info'>
+            <img class='info-icon' src='{$site_url}/_dist/images/final/info-icon.png' alt='info'>
             <p class='info_text'>{$menuItem['item_description']}</p>
         </div>
     ";
     
     echo"
-        <form class='customize_form' action='{$site_url}/../../_includes/add_order.php' method='POST'>
+        <form class='customize_form' action='{$site_url}/_includes/add_order.php' method='POST'>
             <input type='hidden' name='item_name' value='{$menuItem['name']}'>
     ";
     include_once __DIR__ . '/../../_components/added_toppings.php';

@@ -5,13 +5,13 @@ include_once __DIR__ . '/../_components/header.php';
 ?>
 
 <div class="home_header">
-    <img class="burger_background" src="<?php echo site_url(); ?>/../_dist/images/final/fortes_logo_large.png" alt="Burger Background">
+    <img class="burger_background" src="<?php echo site_url(); ?>/_dist/images/final/fortes_logo_large.png" alt="Burger Background">
     <a href="<?php echo site_url(); ?>/final/order/index.php?>" class="button start_order_button">START ORDER</a>
 </div>
 <div class="burger_of_the_month">
     <h2 class="burger_of_the_month_title">BURGER OF THE MONTH</h2>
     <div class="burger_of_the_month_content">
-        <img class="burger_of_the_month" src="<?php echo site_url(); ?>/../_dist/images/final/burger_of_the_month.png" alt="Burger of the Month">
+        <img class="burger_of_the_month" src="<?php echo site_url(); ?>/_dist/images/final/burger_of_the_month.png" alt="Burger of the Month">
         <div class="burger_of_the_month_text">
             <h3 class="burger_of_the_month_name">The <br> Forte <br> Burger</h3>
             <p class="burger_of_the_month_description">With grilled onions, lettuce, pickles, and double patties, this is a SPECIAL ORDER just for you!</p>

@@ -12,7 +12,7 @@ $cart = getAllCartItems($userOrder['id']);
     echo"
         <div class='top_nav'>
             <a class='back_button' href='{$site_url}/final/cart/index.php'>
-                <img src='{$site_url}/../../_dist/images/final/arrow.png' alt='back'>
+                <img src='{$site_url}/_dist/images/final/arrow.png' alt='back'>
             </a>
             <h1 class='top_nav_title'>CHECKOUT</h1>
         </div>
@@ -55,6 +55,7 @@ $cart = getAllCartItems($userOrder['id']);
     $minute1 = $current_minute + 15;
     if ($minute1>60){
         $minute1 = $minute1 - 60;
+        $minute1 = "0" . $minute1;
         $hour1 = $current_hour + 1;
     } else {
         $hour1 = $current_hour;
@@ -65,6 +66,7 @@ $cart = getAllCartItems($userOrder['id']);
     $minute2 = $current_minute + 30;
     if ($minute2>60){
         $minute2 = $minute2 - 60;
+        $minute2 = "0" . $minute2;
         $hour2 = $current_hour + 1;
     } else {
         $hour2 = $current_hour;
@@ -75,6 +77,7 @@ $cart = getAllCartItems($userOrder['id']);
     $minute3 = $current_minute + 45;
     if ($minute3>60){
         $minute3 = $minute3 - 60;
+        $minute3 = "0" . $minute3;
         $hour3 = $current_hour + 1;
     } else {
         $hour3 = $current_hour;

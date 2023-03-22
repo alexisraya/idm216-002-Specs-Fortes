@@ -21,9 +21,9 @@ $query = "UPDATE orders SET status = 'completed', final_total = $total_price, or
 // die();
 $result = mysqli_query($db_connection, $query);
 if ($result){
-    redirect_to('/../final/order/confirmation.php');   
+    redirect_to('/final/order/confirmation.php');   
 } else{
-    redirect_to('/../final/checkout/index.php');
+    redirect_to('/final/checkout/index.php');
 }
     
 

@@ -19,7 +19,7 @@ $order_items = getOrderItems($user['id']);
     echo"
         <div class='top_nav'>
             <a class='back_button' href='{$site_url}/final/cart/index.php'>
-                <img src='{$site_url}/../../_dist/images/final/arrow.png' alt='back'>
+                <img src='{$site_url}/_dist/images/final/arrow.png' alt='back'>
             </a>
             <h1 class='top_nav_title'>CONFIRMATION</h1>
         </div>
