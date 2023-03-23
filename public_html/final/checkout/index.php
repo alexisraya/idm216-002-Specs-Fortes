@@ -164,12 +164,16 @@ $cart = getAllCartItems($userOrder['id']);
 
                 <label for='card_name' class='card_name_label'>CARD NAME</label>
                 <input type='text' name='card_name' placeholder='John Doe' class='card_name_input'>
-
-                <label for='card_exp' class='card_exp_label'>EXPIRATION DATE</label>
-                <input type='text' name='card_exp' placeholder='MM/YY' class='card_exp_input'>
-
-                <label for='card_cvv' class='card_cvv_label'>CVV</label>
-                <input type='text' name='card_cvv' placeholder='123' class='card_cvv_input'>
+                <div class='card_exp_cvv_container'>
+                    <div class='card_exp_container'>
+                        <label for='card_exp' class='card_exp_label'>EXPIRATION DATE</label>
+                        <input type='text' name='card_exp' placeholder='MM/YY' class='card_exp_input'>
+                    </div>
+                    <div class='card_cvv_container'>
+                        <label for='card_cvv' class='card_cvv_label'>CVV</label>
+                        <input type='text' name='card_cvv' placeholder='123' class='card_cvv_input'>
+                    </div>
+                </div>
             </div>
         </div>
 

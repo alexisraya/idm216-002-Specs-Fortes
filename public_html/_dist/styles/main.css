@@ -833,6 +833,7 @@ td{
     grid-template-columns: 1fr 1fr;
     padding: 20px 15px;
     width: 100%;
+    max-width: 800px;
 }
 .subtotal_title, .subtotal_price{
     color: var(--white);
@@ -1222,9 +1223,58 @@ td{
     width: 100%;
 }
 
+.card_exp_cvv_container{
+    width: 100%;
+}
 
-@media (min-width: 810px){
+
+@media screen and (min-width: 800px){
     .start_order_button{
         margin: 0 0 70px 530px;
+    }
+
+    .order_now_button{
+        width: 220px;
+    }
+
+    .burger_of_the_month_content{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger_of_the_month--img{
+        width: 481px;
+    }
+
+    .burger_of_the_month_name{
+        font-size: 4rem;
+    }
+
+    .burger_of_the_month_description{
+        max-width: 344px;
+    }
+
+    .what_we_do_subtitle{
+        font-size: 6rem;
+    }
+
+    .temperature_container_title{
+        text-align: center;
+    }
+
+    .order_footer{
+        justify-content: center;
+        column-gap: 480px;
+    }
+
+    .cart_form_container{
+        align-self: center;
+        max-width: 800px;
+    }
+
+    .card_exp_cvv_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
     }
 }
