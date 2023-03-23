@@ -9,6 +9,9 @@ if (!$_POST) {
 // store $_POST data in variables
 $item_name = sanitize_value($_POST['item_name']);
 $item_price = sanitize_value($_POST['item_price']);
+if (substr($item_price,0,1) == '$') {
+    $item_price = substr($item_price,1);
+}
 $item_price = (float)$item_price;
 $order_id = sanitize_value($_POST['order_id']);
 $menu_item_id = sanitize_value($_POST['menu_item_id']);

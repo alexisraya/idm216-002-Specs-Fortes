@@ -10,11 +10,12 @@ while ($cartItem = mysqli_fetch_array($cart))
 {
     $total += (float)$cartItem['price'];
     $price = '$' . number_format($cartItem['price'], 2);
+    $image_path = $site_url.$cartItem['image_path'];
     echo "
     <div class='cart_item_container'>
         <div class='menu_item_container'>
             <div class='menuItem_image'>
-            <img class='menu_item_image--img' src='{$cartItem['image_path']}' alt='Menu Item Image'>
+            <img class='menu_item_image--img' src='{$image_path}' alt='Menu Item Image'>
             </div>
             <div class='menu_item_text'>
                 <div class='menuItem_title'>
