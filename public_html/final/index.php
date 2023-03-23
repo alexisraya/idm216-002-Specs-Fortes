@@ -24,7 +24,7 @@ include_once __DIR__ . '/../_components/header.php';
     <h3 class="what_we_do_subtitle">Fresh<br>Burgers.</h3>
     <p class="what_we_do_description">Plain and simple, fast and fresh. Forte’s Fresh Burgers brings the freshest tasting beef burgers to communities and campuses all across the nation.</p>
     <p class="hours">Open Monday-Friday: 11AM - 5PM</p>
-    <a href="#" class="button locations_button">OUR LOCATIONS</a>
+    <!-- <a href="#" class="button locations_button">OUR LOCATIONS</a> -->
 </div>
 
 <?php

@@ -28,7 +28,7 @@ $order_items = getOrderItems($user['id']);
             <p class='confirmation_text'>Present this at the truck to pick-up your food</p>
             <h1 class='confirmation_number'>Order #{$user['id']}: {$name}</h1>
             <div class='confirmation_img_container'>
-                <img class='confirmation_img' src='https://via.placeholder.com/151x151' alt='confirmation icon'>
+                <img class='confirmation_img' src='{$site_url}/_dist/images/checkmark.png' alt='confirmation icon'>
                 <h2 class='confirmation_img_text'>Paid</h2>
             </div>
 
@@ -37,7 +37,7 @@ $order_items = getOrderItems($user['id']);
             </div>
 
             <div class='confirmation_location'>
-                <img class='confirmation_location_icon' src='https://via.placeholder.com/37x37' alt='location icon'>
+                <img class='confirmation_location_icon' src='{$site_url}/_dist/images/ion_location.svg' alt='location icon'>
                 <div class='confirmation_location_text'>
                     <p class='confirmation_location_title'>Drexel University -</p>
                     <p class='confirmation_location_address'>Market & 33rd Street</p>

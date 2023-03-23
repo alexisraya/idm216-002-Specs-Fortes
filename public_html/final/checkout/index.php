@@ -124,41 +124,41 @@ $cart = getAllCartItems($userOrder['id']);
             <input type='name'name='order_name' placeholder='Your Name' class='order_name_input' value='{$name}'>
 
             <label for='order_phone' class='order_phone_label'>TEXT NOTIFICATION</label>
-            <input type='tel' name='order_phone' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'' placeholder='{$phone}' maxlength='10' class='order_phone_input'>
-            <h3>PAYMENT METHODS</h3>
+            <input type='tel' name='order_phone' placeholder='{$phone}' maxlength='10' class='order_phone_input'>
+            <h3 class='payment_methods_title'>PAYMENT METHODS</h3>
             <div class='payment_method_container'>
                 <label class='payment_method'>
                     <input type='radio' name='payment_method' value='venmo' id='venmo' class='payment_method_input' checked>
-                    <img src='https://via.placeholder.com/92x92' alt='venmo' class='venmo_icon payment_icon'>
+                    <img src='{$site_url}/_dist/images/payment_methods/payment_venmo.svg' alt='venmo' class='venmo_icon payment_icon'>
                     <p>Venmo</p>
                 </label>
                 <label class='payment_method'>
                     <input type='radio' name='payment_method' value='paypal' id='paypal' class='payment_method_input' checked>
-                    <img src='https://via.placeholder.com/92x92' alt='paypal' class='paypal_icon payment_icon'>
+                    <img src='{$site_url}/_dist/images/payment_methods/payment_paypal.svg' alt='paypal' class='paypal_icon payment_icon'>
                     <p>Paypal</p>
                 </label>
                 <label class='payment_method'>
                     <input type='radio' name='payment_method' value='apple pay' id='apple pay' class='payment_method_input' checked>
-                    <img src='https://via.placeholder.com/92x92' alt='apple pay' class='applepay_icon payment_icon'>
+                    <img src='{$site_url}/_dist/images/payment_methods/payment_apple.svg' alt='apple pay' class='applepay_icon payment_icon'>
                     <p>Apple Pay</p>
                 </label>
                 <label class='payment_method'>
                     <input type='radio' name='payment_method' value='google pay' id='google pay' class='payment_method_input' checked>
-                    <img src='https://via.placeholder.com/92x92' alt='google pay' class='googlepay_icon payment_icon'>
+                    <img src='{$site_url}/_dist/images/payment_methods/payment_googlepay.svg' alt='google pay' class='googlepay_icon payment_icon'>
                     <p>Google Pay</p>
                 </label>
                 <label class='payment_method'>
                     <input type='radio' name='payment_method' value='card' id='card' class='payment_method_input' checked>
-                    <img src='https://via.placeholder.com/92x92' alt='card' class='card_icon payment_icon'>
+                    <img src='{$site_url}/_dist/images/payment_methods/payment_credit.svg' alt='card' class='card_icon payment_icon' id='card_img'>
                     <p>Card</p>
                 </label>
                 <label class='payment_method'>
                     <input type='radio' name='payment_method' value='cash' id='cash' class='payment_method_input' checked>
-                    <img src='https://via.placeholder.com/92x92' alt='cash' class='cash_icon payment_icon'>
+                    <img src='{$site_url}/_dist/images/payment_methods/payment_attruck.svg' alt='cash' class='cash_icon payment_icon'>
                     <p>Pay at Truck</p>
                 </label>
             </div>
-            <div class='card_info_container hide' id='card_info_container'>
+            <div class='card_info_container' id='card_info_container'>
                 <label for='card_number' class='card_number_label'>CARD NUMBER</label>
                 <input type='text' name='card_number' placeholder='1234 5678 9012 3456' class='card_number_input'>
 
@@ -308,13 +308,19 @@ $cart = getAllCartItems($userOrder['id']);
         });
     });
 
-    if(document.getElementById('card').checked) {
-        document.getElementById('card_info_container').classList.remove('hidden');
-    }
-    else{
-        document.getElementById('card_info_container').classList.add('hide');
-    }
+    const payment_icons = document.querySelectorAll(".payment_icon");
 
+    const card_info_container = document.querySelector(".card_info_container");
+
+    payment_icons.forEach((payment_icon) => {
+        payment_icon.addEventListener("click", function () {
+            if (payment_icon.id == "card_img"){
+                card_info_container.style.display = "flex";
+            } else {
+                card_info_container.style.display = "none";
+            }
+        });
+    });
 </script>
 
 <?php

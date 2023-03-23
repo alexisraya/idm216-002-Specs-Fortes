@@ -14,7 +14,7 @@ while ($cartItem = mysqli_fetch_array($cart))
     <div class='cart_item_container'>
         <div class='menu_item_container'>
             <div class='menuItem_image'>
-            <img src='http://placehold.it/83x92' alt='Menu Item Image'>
+            <img class='menu_item_image--img' src='{$cartItem['image_path']}' alt='Menu Item Image'>
             </div>
             <div class='menu_item_text'>
                 <div class='menuItem_title'>
@@ -42,9 +42,6 @@ while ($cartItem = mysqli_fetch_array($cart))
                     </div>
                 </div>
             </div>
-        </div>
-        <div class='cart_item_cancel'>
-            <p class='cart_item_cancel--text'>X</p>
         </div>
     </div>
 ";

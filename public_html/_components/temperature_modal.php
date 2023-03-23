@@ -1,24 +1,29 @@
+<?php
+    $site_url = site_url();
+
+?>
+
 <div class="temperature_container">
     <h4 class="temperature_container_title">How would you like it done?</h4>
     <div class="temperature_images">
         <input id="rare" value="rare" type="radio" name="temperature" hidden>
         <label class="" for="rare">
             <div class="temperature_image js-rare-btn">
-                <img class="temperature_image--img js-rare-btn-img" src="https://placeholder.com/45x45" alt="rare">
+                <img class="temperature_image--img js-rare-btn-img" src="<?php $site_url?>/_dist/images/customize_page/ion_rare.svg" alt="rare">
                 <p class="temperature_title js-rare-title">Rare</p>
             </div>
         </label>
         <input id="medium" value="medium" type="radio" name="temperature" hidden>
         <label class="" for="medium">
-            <div class="temperature_image js-medium-btn">
-                <img class="temperature_image--img js-medium-btn-img" src="https://placeholder.com/45x45" alt="medium">
+            <div class="temperature_image temperature_selected js-medium-btn">
+                <img class="temperature_image--img js-medium-btn-img" src="<?php $site_url?>/_dist/images/customize_page/ion_medium.svg" alt="medium">
                 <p class="temperature_title js-medium-title">Medium</p>
             </div>
         </label>
         <input id="well-done" value="well-done" type="radio" name="temperature" hidden>
         <label class="" for="well-done">
             <div class="temperature_image js-well-done-btn">
-                <img class="temperature_image--img js-well-done-btn-img" src="https://placeholder.com/45x45" alt="well done">
+                <img class="temperature_image--img js-well-done-btn-img" src="<?php $site_url?>/_dist/images/customize_page/ion_well-done.svg" alt="well done">
                 <p class="temperature_title js-well-done-title">Well-Done</p>
             </div>
         </label>

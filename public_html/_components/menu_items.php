@@ -17,7 +17,7 @@
                 <a class='menu_item_link' href='{$site_url}/final/order/customize.php?id={$menuItem['id']}'>
                     <div class='menu_item_container'>
                         <div class='menu_item_image'>
-                        <img src='http://placehold.it/83x92' alt='Menu Item Image'>
+                        <img class='menu_item_image--img' src={$menuItem['image_path']} alt={$menuItem['name']}>
                         </div>
                         <div class='menu_item_text'>
                             <div class='menuItem_title'>
@@ -48,7 +48,7 @@
                 <a class='menu_item_link' href='{$site_url}/final/order/customize.php?id={$menuItem['id']}'>
                 <div class='menu_item_container'>
                     <div class='menu_item_image'>
-                    <img src='http://placehold.it/83x92' alt='Menu Item Image'>
+                    <img class='menu_item_image--img' src={$menuItem['image_path']} alt={$menuItem['name']}>
                     </div>
                     <div class='menu_item_text'>
                         <div class='menuItem_title'>
@@ -70,6 +70,7 @@
 
 <div class='menu_category'>
     <h2 class='category_title'>SIDES</h2>
+    <!-- TODO: FORM FOR SIDES -->
     <?php
         $query = "SELECT * FROM menu WHERE category = 'sides'";
         $result = mysqli_query($db_connection, $query);
@@ -78,7 +79,7 @@
             echo "
                 <div class='menu_item_container'>
                     <div class='menuItem_image'>
-                    <img src='http://placehold.it/83x92' alt='Menu Item Image'>
+                    <img class='menu_item_image--img' src={$menuItem['image_path']} alt={$menuItem['name']}'>
                     </div>
                     <div class='menu_item_text'>
                         <div class='menuItem_title'>
