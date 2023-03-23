@@ -14,49 +14,35 @@ $order_items = getOrderItems($user['id']);
 
 <div class="page-title-container">
     <?php $title = 'Order History';?>
-    <h1 class="text-center cart-title"><?php echo $title; ?></h1>
+    <h1 class="text-center history_title"><?php echo $title; ?></h1>
   </div>
-<?php
-    $site_url = site_url();
-while ($item = mysqli_fetch_array($order_items)) {
-    if($item['items_ordered']!= null){
-        $price = '$'. number_format($item['final_total'],2);
-        echo " 
-        <div class='container-b mx-auto py-3 px-4 mb-4 d-flex flex-column' >
-            <h1 class='big-text text-center my-0'>
-                <strong>Order Number:</strong> {$item['id']}
-                
-            </h1>
-            <p class='text-center mb-2'><strong class='green'>Status:</strong> {$item['status']}</p>
-            <div class='heading-border d-flex justify-content-between mb-3'></div>
-            <div class='d-flex flex-row justify-content-between align-items-center mb-2'>
-                <p><strong>PICKUP TIME</strong></p>
-                <p>
-                    {$pick_up_time}
-                </p>
+<div class='order_history_container'>
+    <?php
+        $site_url = site_url();
+    while ($item = mysqli_fetch_array($order_items)) {
+        if($item['items_ordered']!= null){
+            $price = '$'. number_format($item['final_total'],2);
+            echo " 
+            <div class='order_history_item_container' >
+                <h2 class='order_history_number'>
+                    Order Number: {$item['id']}
+                </h2>
+                <p class='order_history_status'>Status: {$item['status']}</p>
+                <div class='pickup_time_container'>
+                    <p class='pickup_time_title'>PICKUP TIME:</p>
+                    <p class='pickup_time_text'>{$pick_up_time}</p>
+                </div>
+                <div class='total_paid_container'>
+                    <p class='total_paid_title'>TOTAL PAID:</p>
+                    <p class='total_paid_text'>{$price}</p>
+                </div>
             </div>
             
-            <div class='order-history-item-box'>
-                <div class='total-paid'>
-                <p><strong>TOTAL PAID:</strong>{$price}</p>
-                </div>
-                    <hr>";
-                    include __DIR__ . '/../../_components/order_confirm.php';
-                    echo"
-                    
-                    <hr>
-                    
-                </div>
-            </div>
-            <div class='d-flex flex-row justify-content-between align-items-center mb-2'>
-                
-            </div>
-        </div>
-        
-        ";
+            ";
+        }
     }
-}
-?>
+    ?>
+</div>
 
 
 <?php

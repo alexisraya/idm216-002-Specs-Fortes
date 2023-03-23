@@ -1121,7 +1121,7 @@ td{
     flex-direction: column;
     justify-content: flex-start;
     padding: 20px 0px;
-    height: 70vh;
+    min-height: 70vh;
     margin: 0 0 50px 0;
 }
 
@@ -1225,6 +1225,54 @@ td{
 
 .card_exp_cvv_container{
     width: 100%;
+}
+
+.history_title{
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding: 50px 15px;
+}
+
+.order_history_container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 70vh;
+}
+
+.order_history_item_container{
+    border: 1px solid var(--yellow);
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    padding: 15px;
+}
+
+.order_history_number{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.order_history_status{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 5px 0px 10px 0px;
+}
+
+.pickup_time_container, .total_paid_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pickup_time_title, .pickup_time_text, .total_paid_title, .total_paid_text{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
 }
 
 
