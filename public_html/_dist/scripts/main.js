@@ -1,4 +1,5 @@
 // NAVBAR
+const navbar = document.getElementById("navbar");
 const navbarind = document.getElementById("navbarind");
 const home = document.getElementById("menu-home");
 const order = document.getElementById("menu-order");
@@ -32,7 +33,7 @@ function goAccount(){
 	navbarind.classList.add("pos-4");
 }
 
-if (current_url.includes("order")) {
+if (current_url.includes("order") || current_url.includes("checkout") || current_url.includes("cart")) {
 	goOrder();
 }
 else if (current_url.includes("history")) {

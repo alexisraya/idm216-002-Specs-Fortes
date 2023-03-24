@@ -1,4 +1,4 @@
-<div class="navbar-container">
+<div class="navbar-container" id="navbar">
     <div class="nav-nav-container">
         <!-- code here -->
         <div class="nav-bar-bkgrd"></div>

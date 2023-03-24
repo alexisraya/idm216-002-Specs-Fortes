@@ -45,7 +45,7 @@ html, body{
 }
 
 .main_container{
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -72,6 +72,12 @@ p{
     margin: 0;
 }
 
+a{
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    text-decoration: none;
+}
+
 footer{
     align-items: center;
     background-color: var(--background-color);
@@ -82,6 +88,16 @@ footer{
     height: 100px;
     justify-content: center;
     text-align: center;
+}
+
+.background-image{
+    z-index: -1;
+    position: fixed;
+    width: 105%;
+    height: 100%;
+    left: -5px;
+    top: 0px;
+    object-fit: cover;
 }
 
 /* Table Styles */
@@ -116,6 +132,165 @@ td{
     text-overflow: ellipsis;
 }
 
+.button{
+    border-style: none;
+    border-radius: 35px;
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    padding: 15px 22px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Home Page Styles */
+.home_header{
+    background-image: linear-gradient(to bottom,rgba(255,0,0,0), rgba(0,0,0,1));
+    /* border-radius: 0px 0px 500px 500px; */
+    display: flex;
+    justify-content: center;
+    max-width: 100vw;
+    height: 458px;
+}
+
+.burger_background{
+    align-self: flex-start;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    max-height: 458px;
+    z-index: -1;
+}
+
+.start_order_button{
+    align-self: flex-end;
+    background-color: var(--white);
+    color: var(--red);
+    margin: 0px 0px 70px 230px;
+}
+.start_order_button:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.burger_of_the_month{
+    background-color: var(--red);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 20px 0px;
+}
+
+.burger_of_the_month_title{
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 0px 0px 16px 0px;
+    text-align: center;
+}
+
+.burger_of_the_month_content{
+    display: flex;
+    flex-direction: row;
+}
+
+.burger_of_the_month_text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+.burger_of_the_month_name{
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;;
+    font-size: 2.5rem;
+}
+
+.burger_of_the_month_description{
+    color: var(--white);
+}
+
+.order_now_button{
+    background-color: var(--grey);
+    color: var(--white);
+}
+.order_now_button:hover{
+    background-color: var(--white);
+    color: var(--grey);
+}
+
+.what_we_do{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 20px 100px 20px;
+    row-gap: 16px;
+}
+
+.what_we_do_title{
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;;
+    font-size: 1.125rem;
+}
+
+.what_we_do_subtitle{
+    color: var(--yellow);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+.what_we_do_description{
+    color: var(--white);
+    text-align: center;
+}
+
+.hours{
+    color: var(--white);
+    font-weight: 800;
+    text-align: center;
+}
+
+.locations_button{
+    background-color: var(--white);
+    color: var(--black);
+}
+.locations_button:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* MENU PAGE STYLES */
+.menu_header{
+    color: var(--white);
+    padding: 60px 0px 30px 0px;
+    text-align: center;
+}
+
+.menu_title{
+    font-family:'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+.menu_category{
+    display: flex;
+    flex-direction: column;
+    padding: 11px 0px 11px 0px;
+    row-gap: 20px;
+}
+
+.category_title{
+    color: var(--yellow);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.menu_container{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 60px 0px;
+}
+
 /* Menu Item Styles */
 .menu_item_container{
     align-items: center;
@@ -125,10 +300,24 @@ td{
     display: flex;
     column-gap: 22px;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     padding: 15px 12px;
     width: 361px;
     min-height: 123px;
+}
+
+.menu_item_image{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 92px;
+    width: 83px;
+}
+
+.menu_item_image--img{
+    object-fit: contain;
+    height: 92px;
+    width: 83px;
 }
 
 .menu_item_title{
@@ -144,6 +333,7 @@ td{
     margin: 0;
     padding: 0px 0px 5px 0px;
     text-align: left;
+    width: 230px;
 }
 
 .menu_item_price{
@@ -154,6 +344,80 @@ td{
     text-align: right;
 }
 
+.menu_item_link{
+    text-decoration: none;
+}
+
+/* CUSTOMIZE PAGE */
+.order_header{
+    align-items: center;
+    background-color: var(--yellow);
+    display: flex;
+    height: 43px;
+    justify-content: center;
+    width: 100%;
+}
+
+.order_title{
+    color: var(--black);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.order_price{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-weight: 300;
+}
+
+.top_nav{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 1fr;
+    padding: 30px 15px;
+}
+
+.top_nav_title{
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    text-align: center;
+}
+
+.order_footer{
+    align-items: center;
+    background-color: var(--red);
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0 0 0;
+    padding: 45px 35px;
+}
+
+.add_cart_button{
+    background-color: var(--grey);
+    color: var(--white);
+}
+
+.add_cart_button:hover{
+    background-color: var(--white);
+    color: var(--grey);
+}
+
+.order_item_info{
+    align-self: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    column-gap: 10px;
+    padding: 30px 15px;
+    max-width: 400px;
+}
+
+.info_text{
+    color: var(--white);
+}
 /* Login Page */
 .login_container{
     align-items: center;
@@ -162,6 +426,7 @@ td{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .login__title{
@@ -257,17 +522,15 @@ td{
     color: var(--yellow);
 }
 .navbar-container{
-    position: absolute;
+    position: sticky;
     bottom: 0;
     background-color: var(--grey);
     border-top: 8px solid var(--grey);
     width: 100%;
     height: 108px;
+    z-index: 100;
 }
 /* NAVBAR FROM CODEPEN */
-
-
-
 .nav-nav-container {
 	width: 100%;
 	display: flex;
@@ -337,4 +600,729 @@ td{
 }
 .pos-4 {
 	margin-right: -270px;
+}
+
+/* Topping Styles */
+.toppings_container{
+    align-self: center;
+    border: 3px solid var(--white);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px;
+    max-width: 770px;
+    padding: 25px 15px;
+}
+
+.toppings_container_title ,.temperature_container_title{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 0 35px 0;
+    text-align: left;
+}
+
+.toppings_images{
+    align-items: start;
+    display: grid;
+    column-gap: auto;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 44px;
+}
+
+.toppings_image{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0px;
+}
+
+.toppings_image--img{
+    background-color: var(--white);
+    border: 3px solid var(--red);
+    border-radius: 50px;
+    height: 80px;
+    width: 80px;
+}
+.toppings_image--img:hover{
+    background-color: var(--red);
+    cursor: pointer;
+}
+
+.toppings_title, .toppings_price{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.added_toppings_container{
+    align-self: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 35px;
+    margin: 0 0 0 -40px;
+    padding: 0px 15px;
+}
+
+.added_topping{
+    align-self: center;
+    align-items: center;
+    display: grid;
+    column-gap: 22px;
+    grid-template-columns: 15% 70% 15%;
+    width: 70%;
+}
+
+.added_topping_info{
+    align-items: center;
+    column-gap: 43px;
+    display: flex;
+}
+
+.added_topping_img{
+    display: flex;
+}
+.added_topping--img{
+    background-color: var(--red);
+    border-radius: 50px;
+    height: 60px;
+    width: 60px;
+}
+
+.value-label{
+    background-color: var(--white);
+    border: 1px solid var(--red);
+    border-radius: 50px;
+    color: var(--black);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    height: 25px;
+    width: 25px;
+    margin: -5px 0px 0px -15px;
+    padding: 5px 9px;
+    z-index: 4;
+}
+
+.added_topping_title{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.math_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    width: 10px;
+    height: 8px;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    border-radius: 100px;
+}
+.minus{
+    justify-self: start;
+}
+
+.plus{
+    justify-self: end;
+}
+.math_btn:hover{
+    cursor: pointer;
+}
+
+.plus-text, .minus-text{
+    color: var(--black);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin: -2px 0 0 0;
+}
+
+.selected{
+    background-color: var(--red);
+    border: 3px solid var(--black);
+}
+
+.hide{
+    display: none;
+}
+
+/* Temperature Styles */
+.temperature_container{
+    align-self: center;
+    row-gap: 16px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 25px 15px;
+}
+.temperature_container_title{
+    margin: 0;
+}
+.temperature_images{
+    align-self: center;
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.temperature_image{
+    align-items: center;
+    border: 3px solid var(--yellow);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    justify-content: center;
+    padding: 12px 8px;
+    row-gap: 10px;
+    width: 100px;
+}
+.temperature_image:hover{
+    background-color: var(--grey);
+    border-color: var(--white);
+    cursor: pointer;
+}
+.temperature_title{
+    color: var(--yellow);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.temperature_selected{
+    /* color: var(--white); */
+    background-color: var(--grey);
+    border-color: var(--white);
+}
+
+/* CART PAGE */
+.cart_form_container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 30px 15px;
+    max-width: 100vw;
+    min-height: 65vh;
+}
+.cart_form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.subtotal_container{
+    align-self: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 15px;
+    width: 100%;
+    max-width: 800px;
+}
+.subtotal_title, .subtotal_price{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-align: left;
+    justify-self: start;
+}
+.subtotal_price{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: right;
+    justify-self: end;
+}
+
+.yellow_line{
+    background-color: var(--yellow);
+    color: var(--yellow);
+    height: 1px;
+    width: 90vw;
+    margin: 20px 0;
+}
+
+.checkout_button{
+    background-color: var(--red);
+    color: var(--white);
+}
+.checkout_button:hover{
+    background-color: var(--white);
+    color: var(--red);
+}
+
+/* CART ITEM STYLES */
+.cart_items_container{
+    align-self: center;
+    align-items: center;
+    row-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cart_item_container{
+    display: flex;
+}
+
+.cart_item_cancel{
+    background-color: var(--white);
+    border: 3px solid var(--red);
+    border-radius: 50px;
+    height: 30px;
+    margin: -10px 0px 0px -13px;
+    padding: 5px 9px;
+    width: 30px;
+    z-index: 5;
+}
+.cart_item_cancel:hover{
+    cursor: pointer;
+}
+.cart_item_cancel--text{
+    color: var(--red);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: .75rem;
+    font-weight: 500;
+    margin: -1px 0 0 -1px;
+}
+
+.cart_item_options{
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart_item_quantity_container{
+    align-items: center;
+    border: 1.5px solid var(--black);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 8px;
+    width: 70px;
+}
+.cart_item_quantity--text{
+    color: var(--black);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+}
+.cart_item_price{
+    font-size: 1.15rem;
+}
+
+.cart_item_minus:hover{
+    cursor: pointer;
+}
+
+.cart_item_plus:hover{
+    cursor: pointer;
+}
+
+.tip_title{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    justify-self: start;
+}
+.tip_price{
+    color: var(--white);
+    font-family: "Lexend Deca", "Lemon Milk", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: right;
+    justify-self: end;
+}
+
+/* TIP STYLES */
+.tip_container{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.tip_labels_container{
+    align-self: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+.tip_btns{
+    display: flex;
+    column-gap: 0px;
+}
+
+.tip_btn{
+    color: var(--black);
+    border: 1px solid var(--black);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 10px 8px;
+    margin: 0;
+}
+
+.start_tip{
+    border-radius: 11px 0 0 11px;
+}
+
+.end_tip{
+    border-radius: 0 11px 11px 0;
+}
+
+.tip_selected{
+    border: 1px solid var(--yellow);
+    background-color: var(--yellow);
+    font-weight: 500;
+}
+
+.pickup_time_select{
+    border: 1px solid var(--black);
+    border-radius: 8px;
+    height: 60px;
+    margin: 15px;
+    padding: 20px;
+    width: 95%;
+}
+.pickup_time_select option{
+    padding: 0 15px;
+}
+
+.order_signin_container{
+    align-items: center;
+    border: 1px solid var(--yellow);
+    border-radius: 5px;
+    color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin: 15px 0 30px 0;
+    width: 95%;
+}
+
+.order_signin_link{
+    color: var(--yellow);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+.order_signin_link:hover{
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+.checkout_info_container{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 13px;
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.order_name_label, .order_phone_label{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-align: left;
+}
+.order_name_input, .order_phone_input{
+    border: 0px;
+    border-radius: 5px;
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    height: 48px;
+    margin: 0 0 10px 0;
+    padding: 5px 15px;
+    width: 100%;
+}
+
+/* HIDE RADIO */
+[type=radio] { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+/* IMAGE STYLES */
+[type=radio] + img {
+    cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+    outline: 3px solid var(--red);
+}
+
+.payment_methods_title{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+
+.payment_icon{
+    border-radius: 50px;
+    height: 90px;
+    width: 90px;
+}
+
+.payment_method_container{
+    align-self: center;
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 30px;
+    padding: 10px 15px 30px 15px;
+}
+
+.payment_method{
+    align-items: center;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.payment_method p{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+}
+
+/* Order Confirmation Page Styles */
+.confirmation_container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0px;
+    min-height: 70vh;
+    margin: 0 0 50px 0;
+}
+
+.confirmation_text{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.confirmation_number{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 0 20px 0;
+}
+.confirmation_img_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 20px 0;
+}
+.confirmation_img_text{
+    color: var(--yellow);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    padding: 15px 0 0 0;
+    text-align: center;
+}
+.confirmation_img{
+    border: 2px solid var(--yellow);
+    border-radius: 100px;
+}
+
+.confirmation_location{
+    align-self: center;
+    align-items: center;
+    column-gap: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px 0;
+}
+.confirmation_location_title{
+    color: var(--white);
+    font-size: 1.125rem;
+}
+.confirmation_location_address{
+    color: var(--white);
+    font-size: 1rem;
+}
+
+.home_btn{
+    background-color: var(--red);
+    color: var(--white);
+    margin: 0 0 20px 0;
+}
+.home_btn:hover{
+    background-color: var(--white);
+    color: var(--red);
+}
+
+.confirmation_time_title{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.card_info_container{
+    align-items: flex-start;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 13px;
+    padding: 20px 15px;
+    width: 100%;
+}
+
+.card_number_label, .card_name_label, .card_exp_label, .card_cvv_label{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-align: left;
+}
+.card_number_input, .card_name_input, .card_exp_input, .card_cvv_input{
+    border: 0px;
+    border-radius: 5px;
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    height: 48px;
+    margin: 0 0 10px 0;
+    padding: 5px 15px;
+    width: 100%;
+}
+
+.card_exp_cvv_container{
+    width: 100%;
+}
+
+.history_title{
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding: 50px 15px;
+}
+
+.order_history_container{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 70vh;
+}
+
+.order_history_item_container{
+    border: 1px solid var(--yellow);
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+    padding: 15px;
+}
+
+.order_history_number{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.order_history_status{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 5px 0px 10px 0px;
+}
+
+.pickup_time_container, .total_paid_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.pickup_time_title, .pickup_time_text, .total_paid_title, .total_paid_text{
+    color: var(--white);
+    font-family: 'Lexend Deca', 'Lemon Milk', Arial, Helvetica, sans-serif;
+}
+
+
+@media screen and (min-width: 800px){
+    .start_order_button{
+        margin: 0 0 70px 530px;
+    }
+
+    .order_now_button{
+        width: 220px;
+    }
+
+    .burger_of_the_month_content{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .burger_of_the_month--img{
+        width: 481px;
+    }
+
+    .burger_of_the_month_name{
+        font-size: 4rem;
+    }
+
+    .burger_of_the_month_description{
+        max-width: 344px;
+    }
+
+    .what_we_do_subtitle{
+        font-size: 6rem;
+    }
+
+    .temperature_container_title{
+        text-align: center;
+    }
+
+    .order_footer{
+        justify-content: center;
+        column-gap: 480px;
+    }
+
+    .cart_form_container{
+        align-self: center;
+        max-width: 800px;
+    }
+
+    .card_exp_cvv_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
 }

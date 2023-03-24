@@ -32,25 +32,6 @@ function add_user($name, $username, $email, $phone_number, $password)
     return $result;
 }
 
-/**
- * Get user by id
- * @param integer $id
- * @return Array or false
- */
-function get_user_by_id($id)
-{
-    global $db_connection;
-    $query = "SELECT * FROM users WHERE id = $id";
-    $result = mysqli_query($db_connection, $query);
-    if ($result->num_rows > 0) {
-        $user = mysqli_fetch_assoc($result);
-        return $user;
-    } else {
-        return false;
-    }
-}
-
-
 function verify_password($password)
 {
     global $db_connection;
@@ -99,3 +80,80 @@ function get_user_by_username_and_password($username, $password)
         return false;
     }
 }
+
+
+function getUser() {
+    $user = [
+        'id'=> '1'
+    ];
+    return $user;
+}
+
+
+//return order array from database. only active orders(status active)
+function createNewOrderByUserId($userId){
+    global $db_connection;
+    $query = "INSERT INTO orders";
+    $query .="(user_id, checkout_time)";
+    $query .= "VALUES('{$userId}', 'ASAP')";
+    $result = mysqli_query($db_connection, $query);
+    if(!$result){
+        //TODO create error message
+    }
+    return $result;
+}
+
+function getOrderByUserId($userId){
+    global $db_connection;
+    $query= "SELECT * FROM orders WHERE user_id = {$userId} AND status = 'active' LIMIT 1";
+    $result = mysqli_query($db_connection, $query);
+    if($result->num_rows === 1){
+    return $result;
+    } else{ 
+        createNewOrderByUserId($userId);
+        $query= "SELECT * FROM orders WHERE user_id = {$userId} AND status = 'active' LIMIT 1";
+        $result = mysqli_query($db_connection, $query);
+        return $result;
+    }
+}
+
+function create_guest_user(){
+    global $db_connection;
+    $query = 'INSERT INTO users';
+    $query .= ' (isGuest)';
+    $query .= " VALUES ('1')";
+    $result = mysqli_query($db_connection, $query);
+    if ($result) {
+        $recentId = $db_connection->insert_id;
+        get_user_by_id($recentId);
+        // Create a user array in the SESSION variable and assign values to it
+    }
+         
+}
+
+function get_user_by_id($id)
+{
+    global $db_connection;
+    
+    $query = "SELECT * FROM users WHERE id = '$id'";
+    
+    $result = mysqli_query($db_connection, $query);
+    if ($result->num_rows > 0) {
+        $user = mysqli_fetch_assoc($result);
+        $_SESSION['user'] = [
+            'id' => $user['id'],
+        ];
+        return $user;
+    }
+    create_guest_user();
+}
+
+function delete_user_by_id($id)
+{
+    global $db_connection;
+    $query = "DELETE FROM users WHERE id = {$id}";
+    $result = mysqli_query($db_connection, $query);
+    return $result;
+}
+
+?>

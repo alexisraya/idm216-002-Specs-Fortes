@@ -22,5 +22,6 @@ $document_title = $page_title . ' | ' . $site_title;
   <title><?php echo $document_title ; ?></title>
 </head>
 <body>
+  <img class="background-image" src="<?php echo site_url(); ?>/_dist/images/chalkboard_background.png">
   <div class="main_container">
   <!-- Main Content Begins -->
