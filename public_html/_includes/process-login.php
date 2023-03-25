@@ -1,6 +1,8 @@
 <?php
 include __DIR__ . '/../app.php';
 
+$site_url = site_url();
+
 if (!$_POST) {
     die('Unauthorized');
 }
@@ -22,8 +24,8 @@ if ($newUser) {
         'id' => $newUser['id'],
     ];
     
-    redirect_to('/checkout/index.php');
+    redirect_to('/final/cart/index.php');
 } else {
-    $error_message = 'User was not updated: ' . mysqli_error($db_connection);
-    redirect_to('/login/index?error=' . $error_message);
+    $error_message = 'Username or Password is Incorrect ' . mysqli_error($db_connection);
+    redirect_to('/login/index.php?error=' . $error_message);
 }

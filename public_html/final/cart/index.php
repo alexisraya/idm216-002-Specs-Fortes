@@ -7,6 +7,9 @@ $page_title = 'Cart';
 include_once __DIR__ . '/../../_components/order_header.php';
 
 $cart = getAllCartItems($userOrder['id']);
+if ($cart==null){
+    echo" ";
+}
 
 ?>
 

@@ -1,5 +1,6 @@
 <?php
 include __DIR__ . '/../app.php';
+$site_url = site_url();
 
 if (!$_POST) {
     die('Unauthorized');
@@ -11,7 +12,6 @@ $username = sanitize_value($_POST['username']);
 $email = sanitize_value($_POST['email']);
 $phone_number = sanitize_value($_POST['phone_number']);
 $password = sanitize_value($_POST['password']);
-
 
 $result = add_user($name, $username, $email, $phone_number, $password);
 

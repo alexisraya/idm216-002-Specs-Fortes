@@ -509,6 +509,32 @@ td{
     width: 198px;
 }
 
+.account_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.account_container{
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.account_welcome_title{
+    align-self: center;
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon', sans-serif;
+}
+
+.account_welcome_subtitle{
+    align-self: center;
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon', sans-serif;
+    margin: 10px 0;
+}
+
 .navbar{
     align-items: center;
     background-color: var(--grey);
@@ -1297,6 +1323,7 @@ td{
     justify-content: center;
     width: 400px;
     padding: 15px;
+    margin: 15px 0;
 }
 
 .order_history_number{
