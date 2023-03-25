@@ -289,6 +289,14 @@ td{
     display: flex;
     flex-direction: column;
     padding: 0px 0px 60px 0px;
+    margin: 0px 20px;
+}
+
+.menu_category--items{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    row-gap: 15px;
 }
 
 /* Menu Item Styles */
@@ -304,6 +312,7 @@ td{
     padding: 15px 12px;
     width: 361px;
     min-height: 123px;
+    margin: 0px 15px;
 }
 
 .menu_item_image{
@@ -346,6 +355,17 @@ td{
 
 .menu_item_link{
     text-decoration: none;
+}
+
+.sides_button{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sides_item_container{
+    height: 142px;
 }
 
 /* CUSTOMIZE PAGE */
@@ -1304,6 +1324,7 @@ td{
 
 
 @media screen and (min-width: 800px){
+
     .start_order_button{
         margin: 0 0 70px 530px;
     }
@@ -1331,6 +1352,18 @@ td{
 
     .what_we_do_subtitle{
         font-size: 6rem;
+    }
+
+    /* .menu_container{
+        align-items: flex-end;
+        justify-content: flex-end;
+    } */
+
+    .menu_category--items{
+        flex-direction: row;
+        /* column-gap: 10px; */
+        row-gap: 15px;
+        flex-wrap: wrap;
     }
 
     .temperature_container_title{
