@@ -28,21 +28,26 @@ include_once __DIR__ . '/../../_components/order_header.php';
             <h1 class='top_nav_title'>{$menuItem['name']}</h1>
         </div>
     ";
+	echo"<div class='customize_container'>";
+		echo"<div class='customize_toppings_and_info'>";
 
-    include_once __DIR__ . '/../../_components/toppings.php';
+		include_once __DIR__ . '/../../_components/toppings.php';
 
-    echo"
-        <div class='order_item_info'>
-            <img class='info-icon' src='{$site_url}/_dist/images/final/info-icon.png' alt='info'>
-            <p class='info_text'>{$menuItem['item_description']}</p>
-        </div>
-    ";
-    
-    echo"
-        <form class='customize_form' action='{$site_url}/_includes/add_order.php' method='POST'>
-            <input type='hidden' name='item_name' value='{$menuItem['name']}'>
-    ";
-    include_once __DIR__ . '/../../_components/added_toppings.php';
+		echo"
+			<div class='order_item_info'>
+				<img class='info-icon' src='{$site_url}/_dist/images/final/info-icon.png' alt='info'>
+				<p class='info_text'>{$menuItem['item_description']}</p>
+			</div>
+		</div>
+		";
+		
+		echo"
+			<form class='customize_form' action='{$site_url}/_includes/add_order.php' method='POST'>
+				<input type='hidden' name='item_name' value='{$menuItem['name']}'>
+		";
+		include_once __DIR__ . '/../../_components/added_toppings.php';
+	echo"</div>";
+
     include_once __DIR__ . '/../../_components/temperature_modal.php';
 
     $price = '$' . number_format($menuItem['price']/100, 2);
