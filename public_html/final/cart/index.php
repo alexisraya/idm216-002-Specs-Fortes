@@ -23,7 +23,12 @@ $cart = getAllCartItems($userOrder['id']);
         <div class='cart_form_container'>
             <form class='cart_form' action='{$site_url}/_includes/checkout.php' method='POST'>
         ";
+        echo"<div class='cart_and_add_container'>";
     include_once __DIR__ . '/../../_components/cart_items.php';
+    echo"
+            <a class='button add_more_button' href='{$site_url}/final/order'>ADD MORE</a>
+        </div>
+    ";
     $subtotal = (float)$total;
     $subtotal_label = '$' . number_format($subtotal, 2);
     echo"

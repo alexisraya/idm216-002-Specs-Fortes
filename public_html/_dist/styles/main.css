@@ -889,6 +889,26 @@ td{
     display: flex;
 }
 
+.cart_and_add_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.add_more_button{
+    align-self: flex-end;
+    border: 1px solid var(--yellow);
+    color: var(--white);
+    font-size: 1rem;
+    margin: 15px 0px;
+    width: 180px;
+}
+
+.add_more_button:hover{
+    color: var(--yellow);
+}
+
 .cart_item_cancel{
     background-color: var(--white);
     border: 3px solid var(--red);
@@ -1210,6 +1230,7 @@ td{
     row-gap: 13px;
     padding: 20px 15px;
     width: 100%;
+    max-width: 620px;
 }
 
 .card_number_label, .card_name_label, .card_exp_label, .card_cvv_label{
@@ -1339,6 +1360,13 @@ td{
         column-gap:25px;
         margin: 0 15px;
         width: 100%;
+    }
+
+    .subtotal_container, .tip_container{
+        max-width: 400px;
+    }
+    .yellow_line{
+        max-width: 650px;
     }
 }
 

@@ -124,7 +124,7 @@ $cart = getAllCartItems($userOrder['id']);
             <input type='name'name='order_name' placeholder='Your Name' class='order_name_input' value='{$name}'>
 
             <label for='order_phone' class='order_phone_label'>PHONE NUMBER</label>
-            <input type='tel' name='order_phone' placeholder='{'123-456-7890'}' maxlength='10' class='order_phone_input'>
+            <input type='tel' name='order_phone' placeholder='123-456-7890' maxlength='10' class='order_phone_input'>
             <h3 class='payment_methods_title'>PAYMENT METHODS</h3>
             <div class='payment_method_container'>
                 <label class='payment_method'>
