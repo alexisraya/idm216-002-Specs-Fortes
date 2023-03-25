@@ -289,6 +289,14 @@ td{
     display: flex;
     flex-direction: column;
     padding: 0px 0px 60px 0px;
+    margin: 0px 20px;
+}
+
+.menu_category--items{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    row-gap: 15px;
 }
 
 /* Menu Item Styles */
@@ -304,6 +312,7 @@ td{
     padding: 15px 12px;
     width: 361px;
     min-height: 123px;
+    margin: 0px 15px;
 }
 
 .menu_item_image{
@@ -346,6 +355,17 @@ td{
 
 .menu_item_link{
     text-decoration: none;
+}
+
+.sides_button{
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sides_item_container{
+    height: 142px;
 }
 
 /* CUSTOMIZE PAGE */
@@ -418,6 +438,12 @@ td{
 .info_text{
     color: var(--white);
 }
+
+.customize_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Login Page */
 .login_container{
     align-items: center;
@@ -481,6 +507,32 @@ td{
     height: 50px;
     margin: 70px 0px 0px 0px;
     width: 198px;
+}
+
+.account_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.account_container{
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.account_welcome_title{
+    align-self: center;
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon', sans-serif;
+}
+
+.account_welcome_subtitle{
+    align-self: center;
+    color: var(--white);
+    font-family: 'Permanent Marker', 'Lemon', sans-serif;
+    margin: 10px 0;
 }
 
 .navbar{
@@ -648,7 +700,7 @@ td{
     width: 80px;
 }
 .toppings_image--img:hover{
-    background-color: var(--red);
+    border-color: var(--white);
     cursor: pointer;
 }
 
@@ -669,6 +721,7 @@ td{
     row-gap: 35px;
     margin: 0 0 0 -40px;
     padding: 0px 15px;
+    min-width: 450px;
 }
 
 .added_topping{
@@ -677,7 +730,7 @@ td{
     display: grid;
     column-gap: 22px;
     grid-template-columns: 15% 70% 15%;
-    width: 70%;
+    width: 80%;
 }
 
 .added_topping_info{
@@ -882,6 +935,26 @@ td{
     display: flex;
 }
 
+.cart_and_add_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.add_more_button{
+    align-self: flex-end;
+    border: 1px solid var(--yellow);
+    color: var(--white);
+    font-size: 1rem;
+    margin: 15px 0px;
+    width: 180px;
+}
+
+.add_more_button:hover{
+    color: var(--yellow);
+}
+
 .cart_item_cancel{
     background-color: var(--white);
     border: 3px solid var(--red);
@@ -998,7 +1071,6 @@ td{
 .tip_selected{
     border: 1px solid var(--yellow);
     background-color: var(--yellow);
-    font-weight: 500;
 }
 
 .pickup_time_select{
@@ -1204,6 +1276,7 @@ td{
     row-gap: 13px;
     padding: 20px 15px;
     width: 100%;
+    max-width: 620px;
 }
 
 .card_number_label, .card_name_label, .card_exp_label, .card_cvv_label{
@@ -1250,6 +1323,7 @@ td{
     justify-content: center;
     width: 400px;
     padding: 15px;
+    margin: 15px 0;
 }
 
 .order_history_number{
@@ -1277,6 +1351,7 @@ td{
 
 
 @media screen and (min-width: 800px){
+
     .start_order_button{
         margin: 0 0 70px 530px;
     }
@@ -1306,6 +1381,18 @@ td{
         font-size: 6rem;
     }
 
+    /* .menu_container{
+        align-items: flex-end;
+        justify-content: flex-end;
+    } */
+
+    .menu_category--items{
+        flex-direction: row;
+        /* column-gap: 10px; */
+        row-gap: 15px;
+        flex-wrap: wrap;
+    }
+
     .temperature_container_title{
         text-align: center;
     }
@@ -1324,5 +1411,42 @@ td{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
+    }
+
+    .customize_container{
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: flex-start;
+        column-gap:25px;
+        margin: 0 15px;
+        width: 100%;
+    }
+
+    .subtotal_container, .tip_container{
+        max-width: 400px;
+    }
+    .yellow_line{
+        max-width: 650px;
+    }
+}
+
+@media screen and (min-width: 1130px){
+    .customize_form{
+        width: 100%;
+    }
+    .added_toppings_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .toppings_images{
+        column-gap: 10px;
+    }
+
+    .added_topping{
+        min-width:280px;
+        max-width: 321px;
     }
 }

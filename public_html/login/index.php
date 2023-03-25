@@ -19,6 +19,12 @@ include_once __DIR__ . '/../_components/header.php';
             <input class ="login_input" type="text" id="password" name="password" value="">
         </div>
 
+        <?php
+            $errorMessage = isset($_GET['error']) ? $_GET['error'] : false;
+            if ($errorMessage){
+                echo $errorMessage;}
+        ?>
+
         <div class="login_button">
             <input class="login_submit" type="submit" value="Sign In">
         </div>

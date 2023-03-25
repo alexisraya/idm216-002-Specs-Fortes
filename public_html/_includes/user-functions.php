@@ -119,13 +119,15 @@ function getOrderByUserId($userId){
 
 function create_guest_user(){
     global $db_connection;
+    global $_SESSION;
     $query = 'INSERT INTO users';
     $query .= ' (isGuest)';
     $query .= " VALUES ('1')";
     $result = mysqli_query($db_connection, $query);
     if ($result) {
+        $_SESSION = [];
         $recentId = $db_connection->insert_id;
-        get_user_by_id($recentId);
+        return get_user_by_id($recentId);
         // Create a user array in the SESSION variable and assign values to it
     }
          

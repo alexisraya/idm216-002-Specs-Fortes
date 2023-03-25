@@ -123,8 +123,8 @@ $cart = getAllCartItems($userOrder['id']);
             <label for='order_name' class='order_name_label'>ORDER NAME</label>
             <input type='name'name='order_name' placeholder='Your Name' class='order_name_input' value='{$name}'>
 
-            <label for='order_phone' class='order_phone_label'>TEXT NOTIFICATION</label>
-            <input type='tel' name='order_phone' placeholder='{$phone}' maxlength='10' class='order_phone_input'>
+            <label for='order_phone' class='order_phone_label'>PHONE NUMBER</label>
+            <input type='tel' name='order_phone' placeholder='123-456-7890' maxlength='10' class='order_phone_input'>
             <h3 class='payment_methods_title'>PAYMENT METHODS</h3>
             <div class='payment_method_container'>
                 <label class='payment_method'>
