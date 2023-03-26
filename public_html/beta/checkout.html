@@ -16,6 +16,7 @@
     <div class="pageHeader">
         <iconify-icon class="backArrow" icon="material-symbols:arrow-back-ios-rounded"></iconify-icon>
         <h2 class="pageTitle"> Cart Items </h2>
+        <img class="headerLogo" src="images/fortes-logo-abb.svg">
     </div>
     <div class="menu_item"> 
         <h2 class="itemListing"> Classic Cheeseburger </h2>
@@ -50,25 +51,32 @@
         <p> Pick-up Time </p>
         <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
     </div>
-    <div class="checkout_box">
+    <div class= "checkout_pickupLocation">
         <iconify-icon icon="ion:location"></iconify-icon>
-        <p> Drexel University - Marke...</p>
-        <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
+        <div class="checkout_locationName">
+            <p> Drexel University - Market & 33rd </p>
+        </div>
+         <div class="yellowDiv"></div>
+        <p> Edit Location </p>
     </div>
-    <div class="getCentered">
-        <a class="ctaLink"> Sign-In For Quick Checkout </a>
+    <div class="quickCheckout">
+        <a href="sign-in.html"> Sign-In For Quick Checkout </a>
     </div>
-    <h2 class="Subheading"> Order Name </h2>
-    <div class="checkout_box">
-        <p class="placeholderText"> Your Name </p>
+    <div class="checkout_detailsDiv">
+        <div class="checkout_details">
+            <label class="Subheading" for="orderName"> Order Name:</label><br>
+            <input type="text" id="orderName" name="orderName" placeholder="Your Name"><br>
+         </div>
+        <div class="checkout_details">
+            <label class="Subheading" for="phonenumb"> Get Notified? (optional):</label><br>
+            <input type="tel" id="phonenumb" name="phonenumb" placeholder="(123)-456-7890"><br>
+        </div>
     </div>
-<h2 class="Subheading"> Get Notified? (optional) </h2>
-<div class="checkout_box">
-    <p class="placeholderText"> (123)-456-7890 </p>
-</div>
+    
+
 <h2 class="Subheading"> Choose Payment Method </h2>
     <div class="checkout_paymentMethods">
-        <a href="order-confirmed.html">
+        <a href="checkout-popup.html">
             <div class="paymentMethod">
                 <img src="images/creditIcon.png">
                 <p> Credit/ Debit </p>
@@ -107,11 +115,11 @@
 			<iconify-icon class="material-icons" icon="fa-solid:hamburger"></iconify-icon>
 			<span class="nav-item-label">Order</span>
 		</a>
-		<a href="#" class="nav-item">
+		<a href="history.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="material-symbols:history"></iconify-icon>
 			<span class="nav-item-label">History</span>
 		</a>
-		<a href="#" class="nav-item">
+		<a href="sign-in.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="carbon:user-avatar-filled"></iconify-icon>
 			<span class="nav-item-label">Account</span>
 		</a>

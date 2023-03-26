@@ -12,63 +12,57 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
 <body>
-   
     <div class="pageHeader">
         <iconify-icon class="backArrow" icon="material-symbols:arrow-back-ios-rounded"></iconify-icon>
-        <h2 class="pageTitle"> Cart Items </h2>
-    </div>
-    <div class="menu_item"> 
-        <h2 class="itemListing"> Classic Cheeseburger </h2>
-        <p class="description"> Classic burger with a fresh beef patty and cheese  </p>
-        <div>
-            <p class="price"> $9.00 </p>
-            <p class="itemOption"> Duplicate</p>
-            <p class="itemOption"> Edit</p>
-        </div>
-        <img src="images/royal-burger.webp" alt="an image of a Classic Cheeseburger">
-    </div>
-    <div class="cart_totalDiv">
-        <button class="borderButton"> Add More </button>
-        <div class="yellowDiv"> </div>
-        <div class="cart_total"> 
-            <p> Total: </p>
-            <p> $9.00 </p> 
-        </div>
+        <h2 class="pageTitle"> Order Details </h2>
+        <img class="headerLogo" src="images/fortes-logo-abb.svg">
     </div>
 
-    <h2 class="Subheading"> Quick Add </h2>
-    <div class="cart_quickAdd">
-        <div class="quickAddBlock">
-            <img class="itemImage" src="images/drink.png">
-            <p> Add Drink </p>
-            <iconify-icon icon="material-symbols:add-rounded"></iconify-icon>
-        </div>
-        <div class="quickAddBlock">
-            <img class="itemImage" src="images/french-fries.webp">
-            <p> Add Fries </p>
-            <iconify-icon icon="material-symbols:add-rounded"></iconify-icon>
-        </div>
+        <div class="review_orderInfo">
+            <p> Please present this screen at the truck to pickup your food </p>
+            <h2> Order #52: Billy </h2>
+            <div class="orderPaid">
+                <iconify-icon icon="fluent:checkmark-24-filled"></iconify-icon>
+                <h3> Paid! </h3>
+            </div>
+
+             <div class="review_pickupDiv">
+            <h3 class="ctaButton"> Pick-Up Time: 12:30pm </h3>
+             <div class="confirmation_Location">
+                <iconify-icon icon="ion:location"></iconify-icon>
+                <p class=""> Drexel University - Market & 33rd Street</p>
+            </div>
     </div>
-    <div class="getCentered">
-        <button class="activeButton ctaButton payButton"> <a href="checkout.html"> Pay</a></button>
+        </div>
+ 
+    <div class="receipt_item">
+        <div class="reciept_item_name review_pickupDiv">
+            <h3 class="itemListing"> Classic Cheeseburger </h3> 
+            <p> $9.00 </p>
+        </div>
+        <p class="description receipt_item_description review_pickupDiv"> Classic burger with a fresh beef patty and cheese </p>
     </div>
-    <div class="navAllowance"> </div>
+    <div class="receiptButtons">
+        <button class="ctaButton activeButton"> <a href="index-loading.html"> Back Home </a> </button>
+    </div>
+        
 
     <!-- Navigation -->
+    <div class="navAllowance"> </div>
     <nav class="menu">
-		<a href="index.html" class="nav-item">
+		<a href="index-loading.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="ion:home"></iconify-icon>
 			<span class="nav-item-label">Home</span>
 		</a>
-		<a href="menu.html" class="nav-item">
+		<a href="order-details.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="fa-solid:hamburger"></iconify-icon>
 			<span class="nav-item-label">Order</span>
 		</a>
-		<a href="#" class="nav-item">
+		<a href="history.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="material-symbols:history"></iconify-icon>
 			<span class="nav-item-label">History</span>
 		</a>
-		<a href="#" class="nav-item">
+		<a href="sign-in.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="carbon:user-avatar-filled"></iconify-icon>
 			<span class="nav-item-label">Account</span>
 		</a>

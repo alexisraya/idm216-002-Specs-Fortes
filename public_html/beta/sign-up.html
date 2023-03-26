@@ -12,49 +12,38 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
 <body>
-   
-    <div class="pageHeader">
-        <iconify-icon class="backArrow" icon="material-symbols:arrow-back-ios-rounded"></iconify-icon>
-        <h2 class="pageTitle"> Cart Items </h2>
-    </div>
-    <div class="menu_item"> 
-        <h2 class="itemListing"> Classic Cheeseburger </h2>
-        <p class="description"> Classic burger with a fresh beef patty and cheese  </p>
+    <div class="signStyle">
+        <img class="signHead" src="images/sign-up-head.svg">
+       <a href="sign-in.html"> <p class="goToSign"> Already have an account? <span> Sign in here -> </span> </p> </a>
+       
+       <form>
         <div>
-            <p class="price"> $9.00 </p>
-            <p class="itemOption"> Duplicate</p>
-            <p class="itemOption"> Edit</p>
+            <label class="home_p" for="name">Name:</label><br>
+            <input type="text" id="name" name="uname" placeholder="Your Name"><br>
         </div>
-        <img src="images/royal-burger.webp" alt="an image of a Classic Cheeseburger">
-    </div>
-    <div class="cart_totalDiv">
-        <button class="borderButton"> Add More </button>
-        <div class="yellowDiv"> </div>
-        <div class="cart_total"> 
-            <p> Total: </p>
-            <p> $9.00 </p> 
+        <div>
+            <label class="home_p" for="uname">Create Username:</label><br>
+            <input type="text" id="uname" name="username" placeholder="Username">
         </div>
+        <div>
+            <label class="home_p" for="password">Create Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="********">
+        </div>
+        <div>
+            <label class="home_p" for="email"> Email: (optional) </label><br>
+            <input type="text" id="email" name="email" placeholder="youremail@domain.com">
+        </div>
+        <div>
+            <label class="home_p" for="pnumber"> Phone Number: (optional) </label><br>
+            <input type="tel" id="pnumber" name="pnumber" placeholder="(123)-456-7890">
+        </div>
+      </form> 
+      <button class="activeButton ctaButton"> Sign Up </button>
     </div>
 
-    <h2 class="Subheading"> Quick Add </h2>
-    <div class="cart_quickAdd">
-        <div class="quickAddBlock">
-            <img class="itemImage" src="images/drink.png">
-            <p> Add Drink </p>
-            <iconify-icon icon="material-symbols:add-rounded"></iconify-icon>
-        </div>
-        <div class="quickAddBlock">
-            <img class="itemImage" src="images/french-fries.webp">
-            <p> Add Fries </p>
-            <iconify-icon icon="material-symbols:add-rounded"></iconify-icon>
-        </div>
-    </div>
-    <div class="getCentered">
-        <button class="activeButton ctaButton payButton"> <a href="checkout.html"> Pay</a></button>
-    </div>
-    <div class="navAllowance"> </div>
 
     <!-- Navigation -->
+    <div class="navAllowance"> </div>
     <nav class="menu">
 		<a href="index.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="ion:home"></iconify-icon>
@@ -64,7 +53,7 @@
 			<iconify-icon class="material-icons" icon="fa-solid:hamburger"></iconify-icon>
 			<span class="nav-item-label">Order</span>
 		</a>
-		<a href="#" class="nav-item">
+		<a href="history.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="material-symbols:history"></iconify-icon>
 			<span class="nav-item-label">History</span>
 		</a>
