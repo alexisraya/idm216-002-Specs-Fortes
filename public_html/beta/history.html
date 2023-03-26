@@ -12,49 +12,41 @@
         <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
 <body>
-   
     <div class="pageHeader">
-        <iconify-icon class="backArrow" icon="material-symbols:arrow-back-ios-rounded"></iconify-icon>
-        <h2 class="pageTitle"> Cart Items </h2>
+        <h2 class="pageTitle"> Order History </h2>
+        <img class="headerLogo" src="images/fortes-logo-abb.svg">
     </div>
-    <div class="menu_item"> 
+
+    <h1 class="chalkHeading"> Sorted By Most Recent: </h1>
+
+    <div class="menu_item history_item"> 
         <h2 class="itemListing"> Classic Cheeseburger </h2>
-        <p class="description"> Classic burger with a fresh beef patty and cheese  </p>
-        <div>
-            <p class="price"> $9.00 </p>
-            <p class="itemOption"> Duplicate</p>
-            <p class="itemOption"> Edit</p>
+        <p class="description"> Classic burger with a fresh beef patty and cheese </p>
+        <div class="priceAdd">
+            <p class="price"> $9.00 </p> 
+            <p class="smallAlert"> In Progress </p>
+        </div>
+        
+        <img src="images/royal-burger.webp" alt="an image of a Classic Cheeseburger">
+    </div>
+
+    <p class="orderDate"> January 12, 2023 </p>
+    <div class="menu_item history_item itemSpecial"> 
+        <h2 class="itemListing"> Classic Cheeseburger </h2>
+        <p class="description"> Classic burger with a fresh beef patty and cheese </p>
+        <div class="priceAdd">
+            <p class="price"> $9.00 </p> 
+            <a href="cart.html"><button> <iconify-icon icon="material-symbols:add-circle-rounded" style="color: black;" rotate="180deg" width="20px" height="20px"></iconify-icon> Add To Cart </button> </a>
         </div>
         <img src="images/royal-burger.webp" alt="an image of a Classic Cheeseburger">
     </div>
-    <div class="cart_totalDiv">
-        <button class="borderButton"> Add More </button>
-        <div class="yellowDiv"> </div>
-        <div class="cart_total"> 
-            <p> Total: </p>
-            <p> $9.00 </p> 
-        </div>
+    <div class="sectionEnd home_wwdHeader">
+        <div class="whiteDiv"></div>
+        <h3 class="chalkHeading"> End of Orders </h3>
+        <div class="whiteDiv"></div>
     </div>
-
-    <h2 class="Subheading"> Quick Add </h2>
-    <div class="cart_quickAdd">
-        <div class="quickAddBlock">
-            <img class="itemImage" src="images/drink.png">
-            <p> Add Drink </p>
-            <iconify-icon icon="material-symbols:add-rounded"></iconify-icon>
-        </div>
-        <div class="quickAddBlock">
-            <img class="itemImage" src="images/french-fries.webp">
-            <p> Add Fries </p>
-            <iconify-icon icon="material-symbols:add-rounded"></iconify-icon>
-        </div>
-    </div>
-    <div class="getCentered">
-        <button class="activeButton ctaButton payButton"> <a href="checkout.html"> Pay</a></button>
-    </div>
+   
     <div class="navAllowance"> </div>
-
-    <!-- Navigation -->
     <nav class="menu">
 		<a href="index.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="ion:home"></iconify-icon>
@@ -68,7 +60,7 @@
 			<iconify-icon class="material-icons" icon="material-symbols:history"></iconify-icon>
 			<span class="nav-item-label">History</span>
 		</a>
-		<a href="#" class="nav-item">
+		<a href="sign-in.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="carbon:user-avatar-filled"></iconify-icon>
 			<span class="nav-item-label">Account</span>
 		</a>

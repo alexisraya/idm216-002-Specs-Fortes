@@ -15,42 +15,28 @@
    
     <div class="pageHeader">
         <iconify-icon class="backArrow" icon="material-symbols:arrow-back-ios-rounded"></iconify-icon>
-        <h2 class="pageTitle"> Cart Items </h2>
-    </div>
-    <div class="menu_item"> 
-        <h2 class="itemListing"> Classic Cheeseburger </h2>
-        <p class="description"> Classic burger with a fresh beef patty and cheese  </p>
-        <div>
-            <p class="price"> $9.00 </p>
-            <p class="itemOption"> Duplicate</p>
-            <p class="itemOption"> Edit</p>
-        </div>
-        <img src="images/royal-burger.webp" alt="an image of a Classic Cheeseburger">
-    </div>
-    <div class="cart_totalDiv">
-        <button class="borderButton"> Add More </button>
-        <div class="yellowDiv"> </div>
-        <div class="cart_total"> 
-            <p> Total: </p>
-            <p> $9.00 </p> 
-        </div>
+        <h2 class="pageTitle"> Customize </h2>
+        <img class="headerLogo" src="images/fortes-logo-abb.svg">
     </div>
 
-    <h2 class="Subheading"> Quick Add </h2>
-    <div class="cart_quickAdd">
-        <div class="quickAddBlock">
-            <img class="itemImage" src="images/drink.png">
-            <p> Add Drink </p>
-            <iconify-icon icon="material-symbols:add-rounded"></iconify-icon>
+    <div class="customize_itemDisplay">
+        <h2 class="itemTitle customize_itemTitle"> Classic Cheeseburger </h2>
+        <img class="customize_itemImage" src="images/burger-builder.png">
+        <div class="toppingCarousel">
+            <div class="topping"> <img src="images/topping-pickle.png" alt="a pickle"></div>
+            <div class="topping"> <img src="images/topping-onion.png" alt="an onion"></div>
+            <div class="topping"> <img src="images/topping-lettuce.png" alt="a leaf of lettuce"></div>
+            <div class="topping"> <img src="images/topping-mushroom.png" alt="a mushroom"></div>
+            <div class="topping"> <img src="images/topping-egg.png" alt="an egg"></div>
         </div>
-        <div class="quickAddBlock">
-            <img class="itemImage" src="images/french-fries.webp">
-            <p> Add Fries </p>
-            <iconify-icon icon="material-symbols:add-rounded"></iconify-icon>
+        <div class="customize_productDescription">
+            <h4 class="itemListing"> Classic Cheeseburger </h4>
+            <p class="description"> Classic burger with a fresh beef patty and cheese </p>
         </div>
     </div>
-    <div class="getCentered">
-        <button class="activeButton ctaButton payButton"> <a href="checkout.html"> Pay</a></button>
+    <div class="customize_price">
+        <p> $9.00 </p>
+        <button class="ctaButton darkButton"> <a href="cart.html"> Add to Bag</a> </button>
     </div>
     <div class="navAllowance"> </div>
 
@@ -64,11 +50,11 @@
 			<iconify-icon class="material-icons" icon="fa-solid:hamburger"></iconify-icon>
 			<span class="nav-item-label">Order</span>
 		</a>
-		<a href="#" class="nav-item">
+		<a href="history.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="material-symbols:history"></iconify-icon>
 			<span class="nav-item-label">History</span>
 		</a>
-		<a href="#" class="nav-item">
+		<a href="sign-in.html" class="nav-item">
 			<iconify-icon class="material-icons" icon="carbon:user-avatar-filled"></iconify-icon>
 			<span class="nav-item-label">Account</span>
 		</a>
